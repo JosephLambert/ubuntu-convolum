@@ -23,3 +23,18 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+
+production:
+  qiniu_access_key: j9OHxnXvOkcoxz0VdJPKUqcTatcvCKRvVxO_eoBG  # 你的 qiniu AccessKey
+  qiniu_secret_key: UDJaJzvy9xoOm4dPkcoOLsNsvogpUpDSKXGC3NfB  # 你的 qiniu SecretKey
+  qiniu_bucket: jdstore  # 你的 qiniu bucket
+  qiniu_bucket_domain: om4lubav4.bkt.clouddn.com  # 你的 qiniu bucket domain
+
+
+
+development:
+  qiniu_access_key: j9OHxnXvOkcoxz0VdJPKUqcTatcvCKRvVxO_eoBG  # 你的 qiniu AccessKey
+  qiniu_secret_key: UDJaJzvy9xoOm4dPkcoOLsNsvogpUpDSKXGC3NfB  # 你的 qiniu SecretKey
+  qiniu_bucket: jdstore  # 你的 qiniu bucket
+  qiniu_bucket_domain: om4lubav4.bkt.clouddn.com  # 你的 qiniu bucket domain
