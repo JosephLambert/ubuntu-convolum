@@ -1,0 +1,28 @@
+<h2> Post List </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+    <%= link_to("新增文章", new_admin_post_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th> Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @posts.each do |post| %>
+            <tr>
+                <td>
+                    <%= post.id %>
+                </td>
+                <td>
+                    <%= link_to(post.title, admin_post_path(post)) %>
+                </td>
+                <td>
+                    <%= link_to("Edit", edit_admin_post_path(post)) %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
