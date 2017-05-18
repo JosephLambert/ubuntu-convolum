@@ -7,6 +7,7 @@
         <tr>
             <th>#</th>
             <th>Name</th>
+            <th>Category</th>
             <th> Options</th>
         </tr>
     </thead>
@@ -20,7 +21,11 @@
                     <%= link_to(post.title, admin_post_path(post)) %>
                 </td>
                 <td>
-                    <%= link_to("Edit", edit_admin_post_path(post)) %>
+                    <%= post.category %>
+                </td>
+                <td>
+                    <%= link_to("Edit", edit_admin_post_path(post)) %> |
+                    <%= link_to("Delete", admin_post_path(post),method: :delete,:data => { :confirm => "Are you sure?" }) %>
                 </td>
             </tr>
         <% end %>

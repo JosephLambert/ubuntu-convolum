@@ -4,6 +4,9 @@
         <%= f.input :title %>
     </div>
     <div class="group">
+        <%= f.input :category %>
+    </div>
+    <div class="group">
         <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'} %>
     </div>
     <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>

@@ -7,9 +7,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active">
-                    <%= link_to("Products", products_path )%>
+                <li>
+                    <%= link_to("关于我们", posts_path(:category => "关于我们") )%>
                 </li>
+                <li><%= link_to("产品中心", products_path )%></li>
+                <li><%= link_to("方案介绍", posts_path(:category => "方案介绍") )%></li>
+                <li><%= link_to("资讯动态", posts_path(:category => "资讯动态") )%></li>
+                <li><%= link_to("联系我们", posts_path(:category => "联系我们") )%></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
