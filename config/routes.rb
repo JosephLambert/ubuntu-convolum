@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+    mount Ckeditor::Engine => '/ckeditor'
     devise_for :users
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     resources :posts
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
         end
     end
 
-    root 'products#index'
+    root 'welcome#index'
 
     resources :products do
         member do
@@ -44,5 +44,21 @@ Rails.application.routes.draw do
 
     namespace :account do
         resources :orders
+    end
+
+    namespace :aboutus do
+        resources :posts
+    end
+
+    namespace :plansintroduction do
+        resources :posts
+    end
+
+    namespace :news do
+        resources :posts
+    end
+
+    namespace :contactus do
+        resources :posts
     end
 end

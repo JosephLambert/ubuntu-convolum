@@ -1,0 +1,2 @@
+module Contactus::PostsHelper
+end
