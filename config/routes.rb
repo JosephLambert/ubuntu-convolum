@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     root 'welcome#index'
 
     resources :products do
+        collection do
+            get :search
+        end
         member do
             post :add_to_cart
         end
