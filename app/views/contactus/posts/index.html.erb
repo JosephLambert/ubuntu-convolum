@@ -5,3 +5,16 @@
         </td>
     </tr>
 <% end %>
+<h2> New Message </h2>
+<%= simple_form_for @message do |f| %>
+    <div class="group">
+        <%= f.input :name %>
+    </div>
+    <div class="group">
+        <%= f.input :email %>
+    </div>
+    <div class="group">
+        <%= f.input :comment %>
+    </div>
+    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+<% end %>

@@ -31,6 +31,7 @@ Rails.application.routes.draw do
                 patch :move_down
             end
         end
+        resources :messages
     end
 
     root 'welcome#index'
@@ -80,4 +81,6 @@ Rails.application.routes.draw do
     namespace :contactus do
         resources :posts
     end
+
+    resources :messages
 end

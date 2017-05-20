@@ -1,0 +1,34 @@
+<h2> Messages List </h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th> Comment</th>
+            <th>选项</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @messages.each do |message| %>
+            <tr>
+                <td>
+                    <%= message.id %>
+                </td>
+                <td>
+                    <%= message.name %>
+                </td>
+                <td>
+                    <%= message.email %>
+                </td>
+                <td>
+                    <%= message.comment %>
+                </td>
+                <td>
+                    <%= link_to("Delete", admin_message_path(message),method: :delete,:data => { :confirm => "Are you sure?" }) %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+<%= will_paginate @messages, class: "apple_pagination" %>

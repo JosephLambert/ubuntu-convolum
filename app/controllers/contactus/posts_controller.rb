@@ -1,6 +1,7 @@
 class Contactus::PostsController < ApplicationController
     def index
         @posts = Post.where(category: '联系我们').published.order('position ASC')
+        @message = Message.new
     end
 
     def show
