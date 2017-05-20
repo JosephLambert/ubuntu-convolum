@@ -47,9 +47,21 @@ class Admin::PostsController < ApplicationController
         redirect_to admin_posts_path, alert: 'post deleted'
     end
 
+    def publish
+        @post = Post.find(params[:id])
+        @post.publish!
+        redirect_to :back
+    end
+
+    def hide
+        @post = Post.find(params[:id])
+        @post.hide!
+        redirect_to :back
+    end
+
     private
 
     def post_params
-        params.require(:post).permit(:title, :description, :category)
+        params.require(:post).permit(:title, :description, :category, :is_hidden)
      end
 end

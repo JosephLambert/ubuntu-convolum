@@ -18,6 +18,7 @@
                     <%= post.id %>
                 </td>
                 <td>
+                    <%= render_post_status(post) %>
                     <%= link_to(post.title, admin_post_path(post)) %>
                 </td>
                 <td>
@@ -26,6 +27,11 @@
                 <td>
                     <%= link_to("Edit", edit_admin_post_path(post)) %> |
                     <%= link_to("Delete", admin_post_path(post),method: :delete,:data => { :confirm => "Are you sure?" }) %>
+                    <% if post.is_hidden %>
+                        <%= link_to("Publish", publish_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
+                    <% else %>
+                        <%= link_to("Hide", hide_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
+                    <% end %>
                 </td>
             </tr>
         <% end %>

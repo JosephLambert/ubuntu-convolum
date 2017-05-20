@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
     before_action :validate_search_key, only: [:search]
     def index
-        @products = Product.where(is_hidden: false).order('created_at DESC').paginate(page: params[:page], per_page: 5)
+        @products = Product.published.recent.paginate(page: params[:page], per_page: 5)
     end
 
     def show
