@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520045203) do
+ActiveRecord::Schema.define(version: 20170520062959) do
 
   create_table "aboutus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -57,6 +57,13 @@ ActiveRecord::Schema.define(version: 20170520045203) do
     t.string   "aasm_state",       default: "order_placed"
     t.integer  "position"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "product_id"
+    t.string   "image"
   end
 
   create_table "posts", force: :cascade do |t|

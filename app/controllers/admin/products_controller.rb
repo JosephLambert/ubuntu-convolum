@@ -14,12 +14,17 @@ class Admin::ProductsController < ApplicationController
 
     def new
         @product = Product.new
+        @photo = @product.photos.build
       end
 
     def create
         @product = Product.new(product_params)
-
         if @product.save
+            unless params[:photos].nil?
+                params[:photos]['image'].each do |a|
+                    @photo = @product.photos.create(image: a)
+                end
+            end
             redirect_to admin_products_path
         else
             render :new
@@ -33,11 +38,19 @@ end
     def update
         @product = Product.find(params[:id])
 
-        if @product.update(product_params)
+        if !params[:photos].nil?
+            @product.photos.destroy_all
+            params[:photos]['image'].each do |a|
+                @picture = @product.photos.create(image: a)
+            end
+            @product.update(product_params)
+            redirect_to admin_products_path
+
+        elsif @product.update(product_params)
             redirect_to admin_products_path
         else
             render :edit
-        end
+      end
     end
 
     def destroy

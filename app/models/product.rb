@@ -2,6 +2,8 @@ class Product < ApplicationRecord
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
 
+    has_many :photos
+
     acts_as_list
 
     def publish!
