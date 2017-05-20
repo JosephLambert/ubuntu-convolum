@@ -6,7 +6,8 @@ class Contactus::PostsController < ApplicationController
     def show
         @post = Post.find(params[:id])
         if @post.is_hidden
-        flash[:warning] = "This Post already archieved"
-        redirect_to root_path
+            flash[:warning] = 'This Post already archieved'
+            redirect_to root_path
+      end
     end
 end
