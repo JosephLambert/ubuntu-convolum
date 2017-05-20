@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+    acts_as_list
     def publish!
         self.is_hidden = false
         save

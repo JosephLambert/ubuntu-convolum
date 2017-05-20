@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520033305) do
+ActiveRecord::Schema.define(version: 20170520045203) do
 
   create_table "aboutus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20170520033305) do
     t.boolean  "is_paid",          default: false
     t.string   "payment_method"
     t.string   "aasm_state",       default: "order_placed"
+    t.integer  "position"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
   end
 
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 20170520033305) do
     t.datetime "updated_at",                 null: false
     t.string   "category"
     t.boolean  "is_hidden",   default: true
+    t.integer  "position"
   end
 
   create_table "product_lists", force: :cascade do |t|
@@ -87,6 +89,7 @@ ActiveRecord::Schema.define(version: 20170520033305) do
     t.string   "attachment"
     t.string   "category"
     t.boolean  "is_hidden",   default: true
+    t.integer  "position"
   end
 
   create_table "users", force: :cascade do |t|

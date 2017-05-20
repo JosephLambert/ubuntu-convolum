@@ -4,7 +4,7 @@ class Admin::PostsController < ApplicationController
 
     layout 'admin'
     def index
-        @posts = Post.paginate(page: params[:page], per_page: 10)
+        @posts = Post.order('position ASC').paginate(page: params[:page], per_page: 10)
     end
 
     def new
@@ -56,6 +56,18 @@ class Admin::PostsController < ApplicationController
     def hide
         @post = Post.find(params[:id])
         @post.hide!
+        redirect_to :back
+    end
+
+    def move_up
+        @post = Post.find(params[:id])
+        @post.move_higher
+        redirect_to :back
+   end
+
+    def move_down
+        @post = Post.find(params[:id])
+        @post.move_lower
         redirect_to :back
     end
 

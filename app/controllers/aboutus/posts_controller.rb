@@ -1,6 +1,6 @@
 class Aboutus::PostsController < ApplicationController
     def index
-        @posts = Post.where(category: '关于我们').published.recent
+        @posts = Post.where(category: '关于我们').published.order('position ASC')
     end
 
     def show
