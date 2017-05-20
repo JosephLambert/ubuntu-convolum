@@ -2,6 +2,19 @@ class ProductsController < ApplicationController
     before_action :validate_search_key, only: [:search]
     def index
         @products = Product.order('position ASC').published.recent.paginate(page: params[:page], per_page: 5)
+
+        if params[:category].present?
+            @category = params[:category]
+            if @category == '网桥'
+                @products = Product.where(category: '网桥').order('position ASC').published.paginate(page: params[:page], per_page: 5)
+            elsif @category == 'POE'
+                @products = Product.where(category: 'POE').order('position ASC').published.paginate(page: params[:page], per_page: 5)
+            else
+                @products = Product.where(category: 'AP').order('position ASC').published.paginate(page: params[:page], per_page: 5)
+            end
+        else
+            @products = Product.order('position ASC').published.paginate(page: params[:page], per_page: 5)
+        end
     end
 
     def show
