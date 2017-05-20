@@ -24,6 +24,8 @@ class ProductsController < ApplicationController
         if @query_string.present?
             search_result = Product.ransack(@search_criteria).result(distinct: true)
             @products = search_result.paginate(page: params[:page], per_page: 5)
+            srp = Post.ransack(@search_criteria_post).result(distinct: true)
+            @posts = srp.paginate(page: params[:page], per_page: 5)
         end
   end
 
@@ -32,9 +34,14 @@ class ProductsController < ApplicationController
     def validate_search_key
         @query_string = params[:q].gsub(/\\|\'|\/|\?/, '') if params[:q].present?
         @search_criteria = search_criteria(@query_string)
+        @search_criteria_post = search_criteria_post(@query_string)
     end
 
     def search_criteria(query_string)
         { title_or_description_or_category_cont: query_string }
+    end
+
+    def search_criteria_post(query_string)
+        { title_or_description_cont: query_string }
     end
 end
