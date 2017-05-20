@@ -5,7 +5,7 @@ class Admin::OrdersController < ApplicationController
     before_action :admin_required
 
     def index
-        @orders = Order.order('position ASC').paginate(page: params[:page], per_page: 10)
+        @orders = Order.order('id DESC').paginate(page: params[:page], per_page: 10)
     end
 
     def show
