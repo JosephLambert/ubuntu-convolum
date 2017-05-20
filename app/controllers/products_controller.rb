@@ -1,11 +1,15 @@
 class ProductsController < ApplicationController
     before_action :validate_search_key, only: [:search]
     def index
-        @products = Product.all.paginate(page: params[:page], per_page: 5)
+        @products = Product.where(is_hidden: false).order('created_at DESC').paginate(page: params[:page], per_page: 5)
     end
 
     def show
         @product = Product.find(params[:id])
+        if @product.is_hidden
+            flash[:warning] = 'This product already archieved'
+            redirect_to root_path
+    end
     end
 
     def add_to_cart

@@ -40,9 +40,28 @@ end
         end
     end
 
+    def destroy
+        @product = Product.find(params[:id])
+
+        @product.destroy
+        redirect_to admin_products_path, alert: 'product deleted'
+    end
+
+    def publish
+        @product = Product.find(params[:id])
+        @product.publish!
+        redirect_to :back
+    end
+
+    def hide
+        @product = Product.find(params[:id])
+        @product.hide!
+        redirect_to :back
+    end
+
     private
 
     def product_params
-        params.require(:product).permit(:title, :description, :quantity, :price, :image, :attachment, :category)
+        params.require(:product).permit(:title, :description, :quantity, :price, :image, :attachment, :category, :is_hidden)
     end
 end
