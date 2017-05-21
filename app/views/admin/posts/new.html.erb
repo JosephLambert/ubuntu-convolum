@@ -1,16 +1,16 @@
 <h2> New Post </h2>
 <%= simple_form_for [:admin, @post] do |f| %>
     <div class="group">
-        <%= f.input :title %>
+        <%= f.input :title ,:label => "文章标题"%>
     </div>
     <div class="group">
-        <%= f.input :category %>
+        <%= f.input :category ,:label => "分类：关于我们 方案介绍 资讯动态 联系我们" %>
     </div>
     <div class="group">
         <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'} %>
     </div>
     <div class="group">
-        <%= f.input :is_hidden %>
+        <%= f.input :is_hidden ,:label => "勾选为隐藏"%>
     </div>
-    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+    <%= f.submit "提交", data: { disable_with: "Submitting..." } %>
 <% end %>

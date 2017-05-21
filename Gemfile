@@ -53,6 +53,7 @@ gem 'seo_helper'
 gem 'acts_as_list'
 gem 'i18n'
 gem 'rails-i18n'
+gem 'annotate'
 
 group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console

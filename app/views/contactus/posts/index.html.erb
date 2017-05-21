@@ -8,13 +8,13 @@
 <h2> New Message </h2>
 <%= simple_form_for @message do |f| %>
     <div class="group">
-        <%= f.input :name %>
+        <%= f.input :name ,:label => "姓名"%>
     </div>
     <div class="group">
-        <%= f.input :email %>
+        <%= f.input :email ,:label => "邮箱"%>
     </div>
     <div class="group">
-        <%= f.input :comment %>
+        <%= f.input :comment ,:label => "问题或者建议"%>
     </div>
-    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+    <%= f.submit "提交", data: { disable_with: "Submitting..." } %>
 <% end %>

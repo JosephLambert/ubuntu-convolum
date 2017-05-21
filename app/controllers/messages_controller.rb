@@ -6,7 +6,8 @@ class MessagesController < ApplicationController
             redirect_to :back
             flash[:notice] = '您已成功提交问题或者建议'
         else
-            render :new
+            redirect_to :back
+            flash[:warning] = '您提交问题或者建议失败'
         end
     end
 
