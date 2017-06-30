@@ -45,6 +45,10 @@ Rails.application.routes.draw do
         end
     end
 
+    namespace :warehouse do
+        resources :products
+    end
+
     resources :carts do
         collection do
             delete :clean
@@ -71,10 +75,6 @@ Rails.application.routes.draw do
     end
 
     namespace :plansintroduction do
-        resources :posts
-    end
-
-    namespace :news do
         resources :posts
     end
 
