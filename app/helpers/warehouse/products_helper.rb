@@ -1,0 +1,2 @@
+module Warehouse::ProductsHelper
+end
