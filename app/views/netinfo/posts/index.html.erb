@@ -1,1 +1,7 @@
-netinfo index
+<% @posts.each do |post| %>
+    <tr>
+        <td>
+            <%= link_to(post.title, netinfo_post_path(post)) %>
+        </td>
+    </tr>
+<% end %>

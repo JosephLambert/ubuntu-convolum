@@ -1,7 +1,7 @@
 class Netinfo::PostsController < ApplicationController
     layout 'netinfo_layout'
     def index
-        @posts = Post.where(category: '无线知识').published.order('position ASC')
+        @posts = Post.where(category: '网络知识').published.order('position ASC')
     end
 
     def show
