@@ -82,5 +82,9 @@ Rails.application.routes.draw do
         resources :posts
     end
 
+    namespace :wirelessinfo do
+        resources :posts
+    end
+
     resources :messages
 end
