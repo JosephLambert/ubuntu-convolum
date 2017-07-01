@@ -181,3 +181,79 @@
     width: 32px; //定制图片宽度
     height: 32px; //定制图片高度
 }
+
+
+//footer
+
+.footer{
+  text-align: center;
+  min-height: 200px;
+  background-color: #fff;
+  padding: 15px 0;
+  color: #000;
+  font-size: 14px;
+
+  h4 {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  li {
+    margin-top: 5px;
+  }
+
+  a {
+    text-decoration:none;
+    color: #000;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    color: #2196F3;
+  }
+
+  img {
+    display: inline-block;
+    margin-top: -6px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff; /* Logo 外框 */
+    border-radius: 25px; /* Logo 切成圓形 */
+  }
+
+  p {
+    a {
+      color: #ddd;
+    }
+    a:hover {
+      color: #eb5424;
+    }
+  }
+
+  .footer-box {
+    text-align: left !important;
+    margin-top: 15px;
+  }
+
+  .footer-content {
+    font-size: 16px;
+    font-family: Raleway;
+    color: #ddd;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    font-weight: 200;
+
+    img {
+      width: 25px;
+      margin-left: 7.5px;
+      margin-right: -0.1px;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+  }
+}
