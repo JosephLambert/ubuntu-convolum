@@ -86,5 +86,9 @@ Rails.application.routes.draw do
         resources :posts
     end
 
+    namespace :netinfo do
+        resources :posts
+    end
+
     resources :messages
 end

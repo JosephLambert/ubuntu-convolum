@@ -1,0 +1,2 @@
+module Netinfo::PostsHelper
+end
