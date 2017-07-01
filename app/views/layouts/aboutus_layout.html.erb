@@ -7,8 +7,8 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'true' %>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid" style="min-height:550px;">
+            <div class="row" style="margin-bottom:50px;">
                 <%= render "common/navbar" %>
             </div>
             <div class="row">
@@ -21,10 +21,11 @@
                         <li class="active"><%= link_to("企业达人",aboutus_post_path(7))%></li>
                     </ul>
                 </div>
-                <div class="col-md-10" style="margin-top:50px;">
+                <div class="col-md-10">
                     <%= yield %>
                 </div>
             </div>
         </div>
+        <%= render "common/footer" %>
     </body>
 </html>
