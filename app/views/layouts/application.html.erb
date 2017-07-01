@@ -12,8 +12,12 @@
             <div class="row">
                 <%= render "common/navbar" %>
             </div>
-            <%= render "common/flashes" %>
-            <%= yield %>
+            <div class="row">
+                <%= render "common/flashes" %>
+            </div>
+            <div style="margin-top:50px;">
+                <%= yield %>
+            </div>
         </div>
         <%= render "common/footer" %>
     </body>
