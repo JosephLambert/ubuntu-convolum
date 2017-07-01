@@ -4,7 +4,12 @@
         <%= f.input :title ,:label => "文章标题"%>
     </div>
     <div class="group">
-        <%= f.input :category ,:label => "分类：关于我们 方案介绍 资讯动态 联系我们" %>
+        <% Post::CATEGORY.each do |c| %>
+            <label>
+                <%= f.radio_button :category, c %>
+                <%= t(c, :scope => "post.category") %>
+            </label>
+        <% end %>
     </div>
     <div class="group">
         <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'} %>
