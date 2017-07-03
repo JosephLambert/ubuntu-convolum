@@ -1,20 +1,28 @@
-<ul>
-    <li><%= link_to("网桥", products_path(:category => "网桥")) %></li>
-    <li><%= link_to("POE", products_path(:category => "POE")) %></li>
-    <li><%= link_to("AP", products_path(:category => "AP")) %></li>
-</ul>
-<div class="row">
-    <% @products.each do |product| %>
-        <div class="col-xs-6 col-md-3">
-            <%= link_to product_path(product) do  %>
-                <% if product.photos.present? %>
-                    <%= image_tag(product.photos[0].image.thumb.url , class: "thumbnail") %>
-                <% else %>
-                    <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-                <% end %>
-            <% end %>
-            <%= product.title %> ¥ <%= product.price%>
-        </div>
-    <% end %>
+<div class="jumbotron" style="border-radius: 0px;">
+    <h1 class="title">DDDDDDDD</h1>
+    <p class="slogan">CCCCCCCCCCCCCCCCCCCCCCC
+        <br>
+        BBBBBBBBBBBBBBBBBBBBBBB
+        <br>
+        AAAAAAAAAAAAA
+      </p>
+    <p class="lead"><a class="btn btn-lg btn-danger" href="/jobs">马上选购</a></p>
 </div>
-<%= will_paginate @products , class: "apple_pagination"%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>新品推荐</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            1
+    </div>
+        <div class="col-md-6">
+            ppp
+    </div>
+        <div class="col-md-3">
+            2
+    </div>
+    </div>
+</div>
