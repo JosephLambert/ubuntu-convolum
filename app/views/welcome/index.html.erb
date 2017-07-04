@@ -7,26 +7,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="welcome_p2">
-                <%= link_to @intro.link, target: "_blank" do %>
-                    <%= image_tag(@intro.image, :class => "width-100") %>
+        <% @ads.each do |ad| %>
+            <div class="col-md-4">
+                <%= link_to ad.link, target: "_blank" do %>
+                    <%= image_tag(ad.image, :class => "width-100") %>
                 <% end %>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="welcome_p2">
-                <%= link_to @intro.link, target: "_blank" do %>
-                    <%= image_tag(@intro.image, :class => "width-100") %>
-                <% end %>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="welcome_p2">
-                <%= link_to @intro.link, target: "_blank" do %>
-                    <%= image_tag(@intro.image, :class => "width-100") %>
-                <% end %>
-            </div>
-        </div>
+        <% end %>
     </div>
 </div>
