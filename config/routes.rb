@@ -32,6 +32,7 @@ Rails.application.routes.draw do
             end
         end
         resources :messages
+        resources :intros
     end
 
     root 'welcome#index'

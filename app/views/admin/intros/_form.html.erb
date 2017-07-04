@@ -1,0 +1,16 @@
+<div class="col-md-8 col-md-offset-2">
+    <hr style="size:2px" />
+    <%= simple_form_for [:admin, @intro] do |f| %>
+        <%= f.input :link, :label => "图片链接" %>
+        <!-- 上傳圖片 -->
+        <% if @intro.image.present? %>
+            <%= image_tag(@intro.image.url, :class => "width-100") %>
+        <% end %>
+        <%= f.label "上传图片" %><br>
+        <%= f.file_field :image %>
+        <!-- 廣告隱藏與否 -->
+        <div class="form-actions">
+            <%= f.submit "提交", class: 'btn btn-md btn-default' %>
+        </div>
+    <% end %>
+</div>
