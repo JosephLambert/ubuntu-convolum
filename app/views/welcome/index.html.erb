@@ -6,9 +6,9 @@
             <% end %>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top:6px;">
         <% @ads.each do |ad| %>
-            <div class="col-md-4">
+            <div class="col-md-4" style="padding: 0px 2px;">
                 <%= link_to ad.link, target: "_blank" do %>
                     <%= image_tag(ad.image, :class => "width-100") %>
                 <% end %>

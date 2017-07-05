@@ -5,3 +5,16 @@
         </td>
     </tr>
 <% end %>
+搜索框
+<div class="nav navbar-nav navbar-left" style="width: 386px;padding-top: 8px;padding-left: 90px;>
+    <%= form_tag search_products_path , :method => :get  do %>
+        <div class="input-group" id="search-id" >
+            <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="搜索产品或文章...">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </div>
+        </div>
+    <% end %>
+</div>
