@@ -271,3 +271,11 @@
   .alert {
     margin-bottom: 0px;
   }
+
+  //logo showup
+
+.logo{ z-index:0; }
+.logo:hover{ background-color:transparent; z-index:5; }
+.logo span{visibility:hidden; color:#000; padding:0px; }
+.logo span img{position: fixed; bottom:50px; width: 114px; height: 108px;}
+.logo:hover span{ position: fixed;top: 0px; left:101px; visibility:visible; }
