@@ -21,34 +21,43 @@
                 <li style="padding-left:20px;"><%= link_to("网络知识", netinfo_posts_path )%></li>
                 <li style="padding-left:20px;"><%= link_to("云管理", contactus_posts_path )%></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <% if !current_user %>
-                    <li><%= link_to("注册", new_user_registration_path) %> </li>
-                    <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
-                <% else %>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-user-o" aria-hidden="true"></i><%= current_user.email %>
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
+            <ul class="nav navbar-nav navbar-right" style="padding-right:200px;">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                        <i class="fa fa-user-o" aria-hidden="true" >
+                            <% if current_user %>
+                                <%= current_user.email %>
+                            <% end %>
+                        </i>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <% if !current_user %>
+                            <li><%= link_to("注册", new_user_registration_path) %> </li>
+                            <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+                        <% end %>
+                        <% if current_user %>
                             <% if current_user.admin? %>
                                 <li>
-                                    <%= link_to("Admin 选单", admin_products_path) %>
+                                    <%= link_to admin_products_path do %>
+                                        <i class="fa fa-cog"> 后台 </i>
+                                    <% end %>
                                 </li>
                             <% end %>
                             <li>
                                 <%= link_to carts_path do %>
-                                    <i class="fa fa-shopping-cart"> 购物车</i>(<%= current_cart.products.count %> )
+                                    <i class="fa fa-shopping-cart"> 购物车</i>(<%= current_cart.products.count %>)
                               <% end %>
                             </li>
                             <li>
-                                <%= link_to("个人订单列表", account_orders_path)%>
+                                <%= link_to(content_tag(:i, '个人订单', class: 'fa fa-list-ul'), account_orders_path) %>
                             </li>
-                            <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
-                        </ul>
-                    </li>
-                <% end %>
+                            <li>
+                                <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
