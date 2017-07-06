@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705075100) do
+ActiveRecord::Schema.define(version: 20170706055222) do
 
   create_table "aboutus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -126,6 +126,7 @@ ActiveRecord::Schema.define(version: 20170705075100) do
     t.string   "category"
     t.boolean  "is_hidden",   default: true
     t.integer  "position"
+    t.string   "slogan"
   end
 
   create_table "users", force: :cascade do |t|
