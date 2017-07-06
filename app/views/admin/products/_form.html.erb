@@ -5,6 +5,9 @@
             <%= f.input :title ,:label => "产品名称"%>
         </div>
         <div class="group">
+            <%= f.input :slogan ,:label => "宣传语"%>
+        </div>
+        <div class="group">
             <%= f.input :description ,:label => "产品描述"%>
         </div>
         <div class="group">
@@ -22,10 +25,13 @@
             <% end %>
         </div>
         <div class="group">
-            <% if @product.photos.present? %>
-                <span>目前商品图</span><br>
-                <% @product.photos.each do |p| %>
-                    <%= image_tag p.image.thumb.url %><br />
+            <% if @product.new_record? %>
+            <% else %>
+                <% if @product.photos.present? %>
+                    <span>目前商品图</span><br>
+                    <% @product.photos.each do |p| %>
+                        <%= image_tag p.image.thumb.url %><br />
+                    <% end %>
                 <% end %>
             <% end %>
             <%= f.file_field :image, :multiple => true, name: "photos[image][]" %>（"请上传5张图片"）
