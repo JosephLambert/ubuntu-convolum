@@ -20,6 +20,9 @@ class Product < ApplicationRecord
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
 
+    CATEGORY = %w(aw cw sw).freeze
+    validates_inclusion_of :category, in: CATEGORY
+
     validates :title, presence: { message: '请填写产品名称' }
     validates :description, presence: { message: '请填写产品描述' }
     validates :quantity, presence: { message: '请填写数量' }
