@@ -59,7 +59,7 @@
                             <% if product.photos.present? %>
                                 <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
                             <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
                             <% end %>
                         <% end %>
                         <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
@@ -82,7 +82,7 @@
                             <% if product.photos.present? %>
                                 <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
                             <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
                             <% end %>
                         <% end %>
                         <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
@@ -105,7 +105,7 @@
                             <% if product.photos.present? %>
                                 <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
                             <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
                             <% end %>
                         <% end %>
                         <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
