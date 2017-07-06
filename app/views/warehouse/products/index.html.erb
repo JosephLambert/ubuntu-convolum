@@ -52,17 +52,16 @@
             </div>
             <div class="row space-30">
                 <% @productsaw.each do |product| %>
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3 text-center">
                         <%= link_to product_path(product) do  %>
                             <% if product.photos.present? %>
-                                <%= image_tag(product.photos[0].image.thumb.url , class: "thumbnail") %>
+                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
                             <% else %>
                                 <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
                             <% end %>
                         <% end %>
-                        <%= product.title %>
-                        <br>
-                        <%= product.slogan %>
+                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
                     </div>
                 <% end %>
             </div>
