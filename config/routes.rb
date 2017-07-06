@@ -80,7 +80,11 @@ Rails.application.routes.draw do
     end
 
     namespace :plansintroduction do
-        resources :posts
+        resources :posts do
+            member do
+                put 'like', to: 'posts#upvote'
+            end
+        end
     end
 
     namespace :contactus do

@@ -50,6 +50,7 @@ GEM
       tzinfo (~> 1.1)
     acts_as_list (0.9.5)
       activerecord (>= 3.0)
+    acts_as_votable (0.10.0)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     annotate (2.6.5)
@@ -259,6 +260,7 @@ PLATFORMS
 DEPENDENCIES
   aasm
   acts_as_list
+  acts_as_votable (~> 0.10.0)
   annotate
   awesome_rails_console
   bootstrap-sass
