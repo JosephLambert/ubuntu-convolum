@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706055222) do
+ActiveRecord::Schema.define(version: 20170706081139) do
 
   create_table "aboutus", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(version: 20170706055222) do
     t.string   "category"
     t.boolean  "is_hidden",   default: true
     t.integer  "position"
+    t.string   "slogan"
+    t.string   "postpic"
   end
 
   create_table "product_lists", force: :cascade do |t|

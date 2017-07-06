@@ -1,8 +1,31 @@
-<% @posts.each do |post| %>
-    <tr>
-        <td>
-            <%= link_to(post.title, plansintroduction_post_path(post)) %>
-        </td>
-    </tr>
-<% end %>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pwd space-30">
+                    <p class="left-15">首页／方案</p>
+                </div>
+                <div class="row">
+                    <% @posts.each do |post| %>
+                        <div class="col-xs-6 col-md-6 text-center">
+                            <div class="space-50">
+                            </div>
+                            <p class="bg-white post-title"> <%= post.title %> </p>
+                            <p class="bg-white post-slogan"> <%= post.slogan %> </p>
+                            <%= link_to post_path(post) do  %>
+                                <% if post.postpic.present? %>
+                                    <%= image_tag(post.postpic.url , class: "post-pic") %>
+                                <% else %>
+                                    <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79ly1fha95j607vj30by04qq32.jpg") %>
+                                <% end %>
+                            <% end %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="space-30">
+        </div>
+    </div>
+</div>
 <%= will_paginate @posts , class: "apple_pagination"%>

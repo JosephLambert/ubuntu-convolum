@@ -16,6 +16,8 @@ class Post < ApplicationRecord
     CATEGORY = %w(方案 无线知识 网络知识 关于我们 联系我们).freeze
     validates_inclusion_of :category, in: CATEGORY
 
+    mount_uploader :postpic, PostpicUploader
+
     validates :title, presence: { message: '请填写文章标题' }
     validates :description, presence: { message: '请填写正文' }
     validates :category, presence: { message: '请填写文章分类' }
