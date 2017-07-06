@@ -66,10 +66,73 @@
                 <% end %>
             </div>
         </div>
+        <!-- CW -->
+        <div class="container-fluid">
+            <div class="row space-30">
+                <h3 class="cp-title left-15">CW系列 <span class="cp-title-2 left-15">先进科技 业界领先</span></h3>
+            </div>
+            <div class="row space-30">
+                <% @productscw.each do |product| %>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <%= link_to product_path(product) do  %>
+                            <% if product.photos.present? %>
+                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                            <% end %>
+                        <% end %>
+                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <!--sw  -->
+        <div class="container-fluid">
+            <div class="row space-30">
+                <h3 class="cp-title left-15">SW系列 <span class="cp-title-2 left-15">先进科技 业界领先</span></h3>
+            </div>
+            <div class="row space-30">
+                <% @productssw.each do |product| %>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <%= link_to product_path(product) do  %>
+                            <% if product.photos.present? %>
+                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                            <% end %>
+                        <% end %>
+                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <!-- Convolum 特色 -->
+        <div class="container-fluid">
+            <div class="row space-50">
+                <div class="col-md-4">
+                    <hr class="header-hr">
+                </div>
+                <div class="col-md-4 ">
+                    <h2 class="header">Convolum 特色</h2>
+                </div>
+                <div class="col-md-4">
+                    <hr class="header-hr">
+                </div>
+            </div>
+            <div class="row space-30">
+                <div class="col-md-6">
+                    <%= link_to root_path do %>
+                        <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fha71phupxj30c506cgo6.jpg" alt="">
+                    <% end %>
+                </div>
+                <div class="col-md-6">
+                    <%= link_to root_path do %>
+                        <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fha71ztq8nj30c506ctbz.jpg" alt="">
+                    <% end %>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<ul>
-    <li><%= link_to("网桥", products_path(:category => "网桥")) %></li>
-    <li><%= link_to("POE", products_path(:category => "POE")) %></li>
-    <li><%= link_to("AP", products_path(:category => "AP")) %></li>
-</ul>

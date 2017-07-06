@@ -1,6 +1,8 @@
 class Warehouse::ProductsController < ApplicationController
     def index
-        @productsaw = Product.where(category: 'aw').order('position ASC').published.recent.paginate(page: params[:page], per_page: 5)
+        @productsaw = Product.where(category: 'aw').order('position ASC').published.recent
+        @productscw = Product.where(category: 'cw').order('position ASC').published.recent
+        @productssw = Product.where(category: 'sw').order('position ASC').published.recent
     end
 
     def show
