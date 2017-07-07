@@ -8,7 +8,30 @@
                     <h2 class="header">热卖产品</h2>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="space-30">
+                        <%= link_to root_path do %>
+                            <img src="https://ww4.sinaimg.cn/large/006tNbRwly1fhb589ojyxj30dq084jwg.jpg" alt="">
+                        <% end %>
+                    </div>
+                </div>
+                <% @products.each do |product| %>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <div class="space-30">
+                        </div>
+                        <%= link_to product_path(product) do  %>
+                            <% if product.photos.present? %>
+                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
+                            <% end %>
+                        <% end %>
+                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                    </div>
+                <% end %>
+            </div>
         </div>
     </div>
 </div>
-<%= will_paginate @posts , class: "apple_pagination"%>

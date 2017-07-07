@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
     before_action :validate_search_key, only: [:search]
     def index
-        @products = Product.order('position ASC').published.recent.paginate(page: params[:page], per_page: 8)
+        @products = Product.order('position ASC').published.recent
 
         if params[:category].present?
             @category = params[:category]
@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
                 @products = Product.where(category: 'sw').order('position ASC').published.paginate(page: params[:page], per_page: 5)
             end
         else
-            @products = Product.order('position ASC').published.paginate(page: params[:page], per_page: 5)
+            @products = Product.order('position ASC').published
         end
     end
 
