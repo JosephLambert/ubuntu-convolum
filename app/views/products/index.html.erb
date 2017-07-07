@@ -1,21 +1,14 @@
 <div class="jumbotron" style="border-radius: 0px;">
-    <h1 class="title">DDDDDDDD</h1>
-    <p class="slogan">CCCCCCCCCCCCCCCCCCCCCCC
-        <br>
-        BBBBBBBBBBBBBBBBBBBBBBB
-        <br>
-        AAAAAAAAAAAAA
-      </p>
-    <p class="lead"><a class="btn btn-lg btn-danger" href="/jobs">马上选购</a></p>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <ul>
-                <li><%= link_to("网桥", products_path(:category => "aw")) %></li>
-                <li><%= link_to("POE", products_path(:category => "POE")) %></li>
-                <li><%= link_to("AP", products_path(:category => "AP")) %></li>
-            </ul>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <h2 class="header">热卖产品</h2>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<%= will_paginate @posts , class: "apple_pagination"%>
