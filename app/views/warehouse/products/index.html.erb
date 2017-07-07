@@ -18,7 +18,7 @@
                         <% end %>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="padding-left:6px;">
                     <div class="cpad-v space-20">
                         <%= link_to @intro7.link, target: "_blank" do %>
                             <%= image_tag(@intro7.image.ad4, :class => "width-100") %>
@@ -52,7 +52,7 @@
             </div>
             <div class="row">
                 <% @productsaw.each do |product| %>
-                    <div class="col-xs-6 col-md-3 text-center">
+                    <div class="col-xs-6 col-md-3 text-center" style="width:240px;">
                         <div class="space-30">
                         </div>
                         <%= link_to product_path(product) do  %>
@@ -75,7 +75,7 @@
             </div>
             <div class="row">
                 <% @productscw.each do |product| %>
-                    <div class="col-xs-6 col-md-3 text-center">
+                    <div class="col-xs-6 col-md-3 text-center" style="width:240px;">
                         <div class="space-30">
                         </div>
                         <%= link_to product_path(product) do  %>
@@ -98,7 +98,7 @@
             </div>
             <div class="row">
                 <% @productssw.each do |product| %>
-                    <div class="col-xs-6 col-md-3 text-center">
+                    <div class="col-xs-6 col-md-3 text-center" style="width:240px;">
                         <div class="space-30">
                         </div>
                         <%= link_to product_path(product) do  %>

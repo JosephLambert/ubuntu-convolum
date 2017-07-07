@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" >
                     <div class="space-30">
                         <%= link_to @intro10.link, target: "_blank" do %>
                             <%= image_tag(@intro10.image.ad6, :class => "width-100") %>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <% @products.each do |product| %>
-                    <div class="col-xs-6 col-md-3 text-center">
+                    <div class="col-xs-6 col-md-3 text-center" style="width:240px;">
                         <div class="space-30">
                         </div>
                         <%= link_to product_path(product) do  %>
