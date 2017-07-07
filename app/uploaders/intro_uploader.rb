@@ -24,6 +24,22 @@ class IntroUploader < CarrierWave::Uploader::Base
     version :ad2 do
         process resize_to_fill: [530, 270]
     end
+
+    version :ad3 do
+        process resize_to_fill: [579, 276]
+    end
+
+    version :ad4 do
+        process resize_to_fill: [318, 644]
+    end
+
+    version :ad5 do
+        process resize_to_fill: [439, 229]
+    end
+
+    version :ad6 do
+        process resize_to_fill: [493, 339]
+    end
     # Provide a default URL as a default if there hasn't been a file uploaded:
     # def default_url(*args)
     #   # For Rails 3.1+ asset pipeline compatibility:

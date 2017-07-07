@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
     before_action :validate_search_key, only: [:search]
     def index
+        @intro10 = Intro.find(16)
         @products = Product.order('position ASC').published.recent
 
         if params[:category].present?
