@@ -1,18 +1,26 @@
 <div class="container-fluid">
     <div class="row">
         <div class="welcome_p1">
-            <%= link_to @intro.link, target: "_blank" do %>
-                <%= image_tag(@intro.image, :class => "width-100") %>
+            <%= link_to @intro1.link, target: "_blank" do %>
+                <%= image_tag(@intro1.image.ad1, :class => "width-100") %>
             <% end %>
         </div>
     </div>
     <div class="row" style="margin-top:6px;">
-        <% @ads.each do |ad| %>
-            <div class="col-md-4" style="padding: 0px 2px;">
-                <%= link_to ad.link, target: "_blank" do %>
-                    <%= image_tag(ad.image, :class => "width-100") %>
-                <% end %>
-            </div>
-        <% end %>
+        <div class="col-md-4" style="padding: 0px 2px;">
+            <%= link_to @intro2.link, target: "_blank" do %>
+                <%= image_tag(@intro2.image.ad2, :class => "width-100") %>
+            <% end %>
+        </div>
+        <div class="col-md-4" style="padding: 0px 2px;">
+            <%= link_to @intro3.link, target: "_blank" do %>
+                <%= image_tag(@intro3.image.ad2, :class => "width-100") %>
+            <% end %>
+        </div>
+        <div class="col-md-4" style="padding: 0px 2px;">
+            <%= link_to @intro4.link, target: "_blank" do %>
+                <%= image_tag(@intro4.image.ad2, :class => "width-100") %>
+            <% end %>
+        </div>
     </div>
 </div>
