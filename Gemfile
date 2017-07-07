@@ -55,6 +55,7 @@ gem 'i18n'
 gem 'rails-i18n'
 gem 'annotate'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'impressionist'
 
 group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console

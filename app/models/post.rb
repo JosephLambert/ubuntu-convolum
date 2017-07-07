@@ -18,6 +18,7 @@ class Post < ApplicationRecord
 
     mount_uploader :postpic, PostpicUploader
     acts_as_votable
+    is_impressionable
 
     validates :title, presence: { message: '请填写文章标题' }
     validates :description, presence: { message: '请填写正文' }
