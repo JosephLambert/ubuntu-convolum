@@ -1,5 +1,4 @@
 class Aboutus::PostsController < ApplicationController
-    layout 'aboutus_layout'
     def index
         @posts = Post.where(category: '关于我们').published.order('position ASC')
     end

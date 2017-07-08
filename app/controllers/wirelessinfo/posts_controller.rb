@@ -1,5 +1,4 @@
 class Wirelessinfo::PostsController < ApplicationController
-    layout 'wirelessinfo_layout'
     def index
         @posts = Post.where(category: '无线知识').published.order('position ASC')
     end

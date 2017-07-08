@@ -1,5 +1,4 @@
 class Netinfo::PostsController < ApplicationController
-    layout 'netinfo_layout'
     def index
         @posts = Post.where(category: '网络知识').published.order('position ASC')
     end
