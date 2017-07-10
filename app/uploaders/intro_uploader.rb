@@ -30,7 +30,7 @@ class IntroUploader < CarrierWave::Uploader::Base
     end
 
     version :ad4 do
-        process resize_to_fill: [318, 644]
+        process resize_to_fill: [294, 580]
     end
 
     version :ad5 do

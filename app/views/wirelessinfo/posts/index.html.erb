@@ -1,3 +1,33 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pwd space-30">
+                    <p class="left-15">首页／无线知识</p>
+                </div>
+                <div class="col-md-8 space-20">
+                    <div class="cpad">
+                        <%= link_to @intro11.link, target: "_blank" do %>
+                            <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
+                        <% end %>
+                    </div>
+                    <div class="cpad" style="margin-top:10px;">
+                        <%= link_to @intro12.link, target: "_blank" do %>
+                            <%= image_tag(@intro12.image.ad3, :class => "width-100") %>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-left:6px;">
+                    <div class="cpad-v space-20">
+                        <%= link_to @intro13.link, target: "_blank" do %>
+                            <%= image_tag(@intro13.image.ad4, :class => "width-100") %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <% @posts.each do |post| %>
     <tr>
         <td>
