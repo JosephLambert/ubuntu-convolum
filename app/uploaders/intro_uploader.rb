@@ -38,7 +38,7 @@ class IntroUploader < CarrierWave::Uploader::Base
     end
 
     version :ad6 do
-        process resize_to_fill: [440, 339]
+        process resize_to_fill: [465, 335]
     end
     # Provide a default URL as a default if there hasn't been a file uploaded:
     # def default_url(*args)
