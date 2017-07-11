@@ -63,7 +63,10 @@
             <div class="row space-30">
                 <% @posts.each do |post| %>
                     <div class="col-md-6 text-left">
-                        <p  class="post-link" data-toggle="collapse" data-target="#<%= post.id %>"><%= post.title%><i class="fa fa-plus pull-right" style="color:#e2e2e2;" aria-hidden="true"></i></p>
+                        <p  class="post-link" data-toggle="collapse" data-target="#<%= post.id %>"><%= post.title%>
+                            <!-- <i class="fa fa-plus pull-right" style="color:#e2e2e2;" aria-hidden="true"></i> -->
+                            <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fhg0pdxya9j300e00e0i2.jpg" class="pull-right" style="padding:4px 0px;" alt="plus">
+                        </p>
                         <div id="<%= post.id %>" class="collapse post-collapse">
                             <p> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
                             <a href="posts/<%= post.id %>" class="pull-right more">查看详情</a>
