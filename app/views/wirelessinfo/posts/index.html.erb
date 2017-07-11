@@ -68,8 +68,8 @@
                             <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fhg0pdxya9j300e00e0i2.jpg" class="pull-right" style="padding:4px 0px;" alt="plus">
                         </p>
                         <div id="<%= post.id %>" class="collapse post-collapse">
-                            <p> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
-                            <a href="posts/<%= post.id %>" class="pull-right more">查看详情</a>
+                            <p style="margin-bottom:40px;"> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
+                            <a href="posts/<%= post.id %>" class="pull-right more"><span style="font-size:13px;">查看详情</span></a>
                         </div>
                     </div>
                 <% end %>
