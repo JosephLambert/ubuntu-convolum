@@ -5,7 +5,10 @@
 .post-link {
   font-size: 16px;
   color: #666666;
-  margin: 15px 0px;
+  margin: 0px;
+  padding:15px 0px 15px 5px;
+  margin: 0px 10px 0px 10px;
+  border-bottom: thin solid #E0E0E0;
 
   a {
     color: #666666;
@@ -17,3 +20,18 @@
       text-decoration: underline;
     }
 }
+
+.post-collapse {
+  background-color: #fafafa;
+  padding: 24px 18px 45px 18px;
+}
+
+.more {
+  color: #1690dc;
+  text-decoration: none;
+  }
+
+.more:hover, .more:focus {
+    color: #1690dc;
+    text-decoration: underline;
+  }

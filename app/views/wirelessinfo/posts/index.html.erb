@@ -6,10 +6,18 @@
                     <p class="left-15">首页／无线知识</p>
                 </div>
                 <div class="col-md-8 space-20">
-                    <div class="cpad">
-                        <%= link_to @intro11.link, target: "_blank" do %>
-                            <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
-                        <% end %>
+                    <!-- Trigger the modal with a pic & link -->
+                    <div class="cpad" data-toggle="modal" data-target="#wirelessvideo">
+                        <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="wirelessvideo" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                1111
+                            </div>
+                        </div>
                     </div>
                     <div class="cpad" style="margin-top:10px;">
                         <%= link_to @intro12.link, target: "_blank" do %>
@@ -51,13 +59,28 @@
                     </a>
                 </div>
             </div>
+            <!-- post -->
             <div class="row space-30">
                 <% @posts.each do |post| %>
                     <div class="col-md-6 text-left">
-                        <p class="post-link"> <%= link_to(post.title, wirelessinfo_post_path(post)) %> </p>
+                        <p  class="post-link" data-toggle="collapse" data-target="#<%= post.id %>"><%= post.title%><i class="fa fa-plus pull-right" style="color:#e2e2e2;" aria-hidden="true"></i></p>
+                        <div id="<%= post.id %>" class="collapse post-collapse">
+                            <p> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
+                            <a href="posts/<%= post.id %>" class="pull-right more">查看详情</a>
+                        </div>
                     </div>
                 <% end %>
             </div>
+        </div>
+        <div class="space-50">
+        </div>
+    </div>
+</div>
+<!-- hr -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <hr style="margin:30px 0px 0px 0px;border-top: 1px solid #eeeeee;">
         </div>
     </div>
 </div>
