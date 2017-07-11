@@ -56,3 +56,41 @@
   width: 450px;
   height: 42px;
 }
+
+.search-input {
+  color: #fff;
+  position: absolute;
+  padding-left: 15px;
+  top:0;
+  left: 0;
+  width:450px ;
+  background-color:transparent;
+  height: 42px;
+  border: 1px solid #cdcdcd;
+  border-radius: 35px;
+}
+
+.search-icon {
+  background-color:transparent;
+  border: 1px solid #cdcdcd;
+  border-radius: 35px;
+
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #cdcdcd;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #cdcdcd;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #cdcdcd;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #cdcdcd;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #cdcdcd;
+}
