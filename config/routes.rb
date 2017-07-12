@@ -36,6 +36,7 @@ Rails.application.routes.draw do
         end
         resources :messages
         resources :intros
+        resources :videos
     end
 
     root 'welcome#index'

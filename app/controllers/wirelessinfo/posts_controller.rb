@@ -4,6 +4,7 @@ class Wirelessinfo::PostsController < ApplicationController
         @intro12 = Intro.find(18)
         @intro13 = Intro.find(19)
         @posts = Post.where(category: '无线知识').published.order('position ASC').limit(12)
+        @video = Video.first
     end
 
     def show

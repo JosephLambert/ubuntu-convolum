@@ -1,0 +1,11 @@
+<h2><span class="fa fa-file-text-o"></span>新建视频</h2>
+<div class="col-md-8 col-md-offset-2">
+    <hr style="size:2px" />
+    <%= simple_form_for [:admin, @video] do |f| %>
+        <%= f.input :name, :label => "视频标题" %>
+        <%=f.file_field :content%>
+        <div class="form-actions">
+            <%= f.submit "提交", class: 'btn btn-md btn-default' %>
+        </div>
+    <% end %>
+</div>

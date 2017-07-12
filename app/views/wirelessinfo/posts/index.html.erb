@@ -12,10 +12,10 @@
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="wirelessvideo" role="dialog">
-                        <div class="modal-dialog">
+                        <div class="col-md-8 col-md-offset-2" style="padding-left:46px;">
                             <!-- Modal content-->
-                            <div class="modal-content">
-                                1111
+                            <div style="margin-top:70px;">
+                                <%= video_tag @video.content_url.to_s ,:controls =>true ,:autoplay => true %>
                             </div>
                         </div>
                     </div>
