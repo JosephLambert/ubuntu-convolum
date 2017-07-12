@@ -35,3 +35,34 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 show-list" style="height:100%;min-height:820px;">
+                    <div class="space-50">
+                    </div>
+                    <% @posts.each do |post| %>
+                        <div class="show-list-item">
+                            <%= link_to(post.title, wirelessinfo_post_path(post)) %>
+                        </div>
+                    <% end %>
+                    <div class="space-50">
+                        <%= will_paginate @posts , class: "apple_pagination"%>
+                    </div>
+                </div>
+                <div class="col-md-10 show-post" style="height:100%;min-height:820px;">
+                    <div class="post-title-show">
+                        <%= @post.title %>
+                    </div>
+                    <hr style="margin: 8px 42px 18px 42px;">
+                    <div class="post-description">
+                        <%= raw @post.description %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-30">
+</div>

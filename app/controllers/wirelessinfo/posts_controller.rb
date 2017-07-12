@@ -7,6 +7,7 @@ class Wirelessinfo::PostsController < ApplicationController
     end
 
     def show
+        @posts = Post.where(category: '无线知识').published.recent.paginate(page: params[:page], per_page: 12)
         @post = Post.find(params[:id])
         if @post.is_hidden
             flash[:warning] = 'This Post already archieved'

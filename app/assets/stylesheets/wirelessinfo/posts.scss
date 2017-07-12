@@ -94,3 +94,50 @@
 ::-ms-input-placeholder { /* Microsoft Edge */
    color:    #cdcdcd;
 }
+
+
+.show-list {
+  background-color: #2672c1;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    }
+
+  a:hover, a:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+}
+
+.show-post {
+  background-color: #fff;
+
+}
+
+.show-list-item {
+  margin-bottom: 27px;
+  margin-left: 7.5px;
+}
+
+.post-title-show {
+  margin-left: 42px;
+  padding-top: 47.5px;
+  padding-bottom: 0px;
+}
+
+.post-description {
+  margin-left: 42px;
+  margin-bottom: 40px;
+}
+
+.post-description {
+  margin-left: 42px;
+  font-size: 1.2em;
+  line-height: 1.8em;                   //拉开行高
+  text-align: justify;                  //文本两端对齐
+  img {
+    max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
+    border-radius: 1px;                 //为所有图片设置6px的圆角
+    }
+}
