@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row" style="padding-top:-20px;">
     <div class="col-md-8 col-md-offset-2" >
         <div class="container-fluid">
             <div class="row">
@@ -47,8 +47,8 @@
                             <%= link_to(post.title, wirelessinfo_post_path(post)) %>
                         </div>
                     <% end %>
-                    <div class="space-50">
-                        <%= will_paginate @posts , class: "apple_pagination"%>
+                    <div style="margin-top:33px;">
+                        <%= will_paginate @posts , :page_links => false%>
                     </div>
                 </div>
                 <div class="col-md-10 show-post" style="height:100%;min-height:820px;">
