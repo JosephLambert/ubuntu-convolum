@@ -16,6 +16,9 @@ class Post < ApplicationRecord
     CATEGORY = %w(方案 无线知识 网络知识 关于我们 联系我们).freeze
     validates_inclusion_of :category, in: CATEGORY
 
+    SUBCATE = %w(无线知识 无线覆盖 无线网桥 专有名词).freeze
+    validates_inclusion_of :subcate, in: SUBCATE
+
     mount_uploader :postpic, PostpicUploader
     acts_as_votable
     is_impressionable

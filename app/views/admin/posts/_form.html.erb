@@ -16,6 +16,14 @@
             <% end %>
         </div>
         <div class="group">
+            <% Post::SUBCATE.each do |c| %>
+                <label>
+                    <%= f.radio_button :subcate, c %>
+                    <%= t(c, :scope => "post.subcate") %>
+                </label>
+            <% end %>
+        </div>
+        <div class="group">
             <% if @post.new_record? %>
             <% else %>
                 <% if @post.postpic.present? %>
