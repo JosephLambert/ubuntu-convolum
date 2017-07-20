@@ -35,6 +35,7 @@
         </div>
     </div>
 </div>
+<!-- main part -->
 <div class="row">
     <div class="col-md-8 col-md-offset-2" style="position:relative;left:0px;top:-60px;">
         <div class="container-fluid">
@@ -42,6 +43,21 @@
                 <div class="col-md-2 show-list" style="height:820px;overflow-y:scroll;direction: ltr;">
                     <div class="space-50">
                     </div>
+                    <!-- <div class="show-list-item">
+                        <%= link_to("专业无线知识汇总", wirelessinfo_post_path(@post) ) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("无线知识", wirelessinfo_post_path(@post)) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("无线覆盖知识", wirelessinfo_post_path(@post)) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("无线网桥知识", wirelessinfo_post_path(@post)) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("专有名词", wirelessinfo_post_path(@post)) %>
+                    </div> -->
                     <% @posts.each do |post| %>
                         <div class="show-list-item">
                             <%= link_to(post.title, wirelessinfo_post_path(post)) %>
