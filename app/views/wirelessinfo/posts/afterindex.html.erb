@@ -1,0 +1,82 @@
+<!-- pwd -->
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pwd" style="margin-top:20px;">
+                    <p class="left-15">首页／无线知识</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- search -->
+<div class="row" style="margin-top:10px;">
+    <div class="col-md-12">
+        <div class="search-box">
+            <div class="container-fluid">
+                <div class="row" style="margin-top:80px;">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="search-bar">
+                            <%= form_tag search_products_path , :method => :get  do %>
+                                <div class="input-group" id="search-id" >
+                                    <input type="text" class="search-input" name="q" value="<%= params[:q] %>" placeholder="请输入您的问题...">
+                                    <div class="input-group-btn ">
+                                        <button class="btn  search-icon" type="submit">
+                                            <i class="fa fa-search" style="color:#fff;font-size:26px;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main part -->
+<div class="row">
+    <div class="col-md-8 col-md-offset-2" style="position:relative;left:0px;top:-60px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 show-list" style="height:820px;">
+                    <div class="space-50">
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("分类1", wirelessinfo_afterindex_path(:subcate => "分类1") ) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("分类2", wirelessinfo_afterindex_path(:subcate => "分类2")) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("分类3", wirelessinfo_afterindex_path(:subcate => "分类3")) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("分类4", wirelessinfo_afterindex_path(:subcate => "分类4")) %>
+                    </div>
+                    <div class="show-list-item">
+                        <%= link_to("分类5", wirelessinfo_afterindex_path(:subcate => "分类5")) %>
+                    </div>
+                </div>
+                <div class="col-md-10 show-post" style="height:820px;">
+                    <div class="posts-title-show">
+                        <%= @subcate %>
+                    </div>
+                    <hr style="margin: 25px 42px 25px 42px;">
+                    <div class="posts-index">
+                        <% @posts.each do |post| %>
+                            <div style="padding-bottom:11px;">
+                                <span class="item_time"><%= post.created_at.strftime("%Y/%m/%d") %></span>
+                                <span class="item_title"><%= link_to(post.title, post_path(post)) %></span>
+                            </div>
+                        <% end %>
+                    </div>
+                    <%= will_paginate @posts , class: " apple_pagination_white"%>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-30">
+</div>

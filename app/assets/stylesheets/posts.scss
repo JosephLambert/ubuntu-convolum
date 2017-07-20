@@ -1,3 +1,27 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-title-show {
+  margin-left: 42px;
+  padding-top: 47.5px;
+  padding-bottom: 0px;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+
+.post-description {
+
+  margin-left: 42px;
+  margin-right: 42px;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+  line-height: 1.8em;                   //拉开行高
+  text-align: justify;                  //文本两端对齐
+  img {
+
+    max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
+    border-radius: 1px;                 //为所有图片设置6px的圆角
+    }
+}

@@ -54,30 +54,29 @@
             </div>
             <div class="row " style="margin-top:5px;">
                 <div class="col-md-12 text-center">
-                    <a href=/wirelessinfo/posts/8 style="color:#1690dc;">
-                        <p>查看更多</p>
-                    </a>
-                </div>
-            </div>
-            <!-- post -->
-            <div class="row space-30">
-                <% @posts.each do |post| %>
-                    <div class="col-md-6 text-left">
-                        <p  class="post-link" data-toggle="collapse" data-target="#<%= post.id %>"><%= post.title%>
-                            <!-- <i class="fa fa-plus pull-right" style="color:#e2e2e2;" aria-hidden="true"></i> -->
-                            <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fhg0pdxya9j300e00e0i2.jpg" class="pull-right" style="padding:4px 0px;" alt="plus">
-                        </p>
-                        <div id="<%= post.id %>" class="collapse post-collapse">
-                            <p style="margin-bottom:40px;"> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
-                            <a href="posts/<%= post.id %>" class="pull-right more"><span style="font-size:13px;">查看详情</span></a>
-                        </div>
-                    </div>
-                <% end %>
+                    <p class="index_more"><%= link_to("查看更多", wirelessinfo_afterindex_path(:subcate => "分类1")  )%></li>
+                </p>
             </div>
         </div>
-        <div class="space-50">
+        <!-- post -->
+        <div class="row space-30">
+            <% @posts.each do |post| %>
+                <div class="col-md-6 text-left">
+                    <p  class="post-link" data-toggle="collapse" data-target="#<%= post.id %>"><%= post.title%>
+                        <!-- <i class="fa fa-plus pull-right" style="color:#e2e2e2;" aria-hidden="true"></i> -->
+                        <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fhg0pdxya9j300e00e0i2.jpg" class="pull-right" style="padding:4px 0px;" alt="plus">
+                    </p>
+                    <div id="<%= post.id %>" class="collapse post-collapse">
+                        <p style="margin-bottom:40px;"> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
+                        <a href="posts/<%= post.id %>" class="pull-right more"><span style="font-size:13px;">查看详情</span></a>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
+    <div class="space-50">
+    </div>
+</div>
 </div>
 <!-- hr -->
 <div class="container-fluid">

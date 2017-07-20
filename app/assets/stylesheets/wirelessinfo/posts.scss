@@ -120,20 +120,20 @@
   margin-left: 7.5px;
 }
 
-.post-title-show {
+.posts-title-show {
   margin-left: 42px;
   padding-top: 47.5px;
   padding-bottom: 0px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: normal;
 }
 
 
-.post-description {
+.posts-index {
 
   margin-left: 42px;
   margin-right: 42px;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   font-size: 1.1em;
   line-height: 1.8em;                   //拉开行高
   text-align: justify;                  //文本两端对齐
@@ -142,4 +142,22 @@
     max-width:100%; height:auto;         //重要样式代码，实现不同大小屏幕下的响应式伸缩
     border-radius: 1px;                 //为所有图片设置6px的圆角
     }
+}
+
+.index_more {
+  a {
+    color:#1690dc;
+  }
+}
+
+.item_time {
+
+}
+
+.item_title {
+
+  padding-left: 10px;
+  font-size: 1.1em;
+
+
 }

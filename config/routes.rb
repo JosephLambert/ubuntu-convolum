@@ -93,6 +93,7 @@ Rails.application.routes.draw do
 
     namespace :wirelessinfo do
         resources :posts
+        get 'afterindex', to: 'posts#afterindex'
     end
 
     namespace :netinfo do
