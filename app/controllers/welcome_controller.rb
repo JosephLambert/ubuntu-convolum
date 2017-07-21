@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
     def index
-        @intro1 = Intro.find(7)
-        @intro2 = Intro.find(8)
-        @intro3 = Intro.find(9)
-        @intro4 = Intro.find(10)
+        @intro1 = Intro.find(1)
+        @intro2 = Intro.find(2)
+        @intro3 = Intro.find(3)
+        @intro4 = Intro.find(4)
       end
 end

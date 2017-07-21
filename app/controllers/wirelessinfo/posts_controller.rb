@@ -1,10 +1,10 @@
 class Wirelessinfo::PostsController < ApplicationController
     def index
-        @intro11 = Intro.find(17)
-        @intro12 = Intro.find(18)
-        @intro13 = Intro.find(19)
+        @intro11 = Intro.find(11)
+        @intro12 = Intro.find(12)
+        @intro13 = Intro.find(13)
         @posts = Post.where(category: '无线知识').published.order('position ASC').limit(12)
-        @video = Video.find(3)
+        @video = Video.find(1)
     end
 
     def show
