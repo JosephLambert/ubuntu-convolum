@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             <!-- 文章封面 -->
-                            <%= link_to post_path(post) do  %>
+                            <%= link_to plansintroduction_post_path(post) do  %>
                                 <% if post.postpic.present? %>
                                     <%= image_tag(post.postpic.url , class: "post-pic") %>
                                 <% else %>
