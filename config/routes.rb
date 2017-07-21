@@ -98,6 +98,7 @@ Rails.application.routes.draw do
 
     namespace :netinfo do
         resources :posts
+        get 'afterindex', to: 'posts#afterindex'
     end
 
     resources :messages

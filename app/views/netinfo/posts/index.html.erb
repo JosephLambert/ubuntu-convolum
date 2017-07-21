@@ -1,7 +1,88 @@
-<% @posts.each do |post| %>
-    <tr>
-        <td>
-            <%= link_to(post.title, netinfo_post_path(post)) %>
-        </td>
-    </tr>
-<% end %>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pwd space-30">
+                    <p class="left-15">首页／网络知识</p>
+                </div>
+                <div class="col-md-8 space-20">
+                    <!-- Trigger the modal with a pic & link -->
+                    <div class="cpad" data-toggle="modal" data-target="#wirelessvideo">
+                        <%= image_tag(@intro14.image.ad3, :class => "width-100") %>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="wirelessvideo" role="dialog">
+                        <div class="col-md-8 col-md-offset-2" style="padding-left:46px;">
+                            <!-- Modal content-->
+                            <div style="margin-top:70px;">
+                                <%= video_tag @video.content_url.to_s ,:controls =>true ,:autoplay => false %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cpad" style="margin-top:10px;">
+                        <%= link_to @intro15.link, target: "_blank" do %>
+                            <%= image_tag(@intro15.image.ad3, :class => "width-100") %>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-left:6px;">
+                    <div class="cpad-v space-20">
+                        <%= link_to @intro16.link, target: "_blank" do %>
+                            <%= image_tag(@intro16.image.ad4, :class => "width-100") %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row  space-30">
+    <div class="col-md-2" style="margin-right:30px;">
+    </div>
+    <div class="col-md-8 bg-white" style="max-width:910px;padding:0px;">
+        <div class="container-fluid">
+            <div class="row space-30">
+                <div class="col-md-4" style="padding:0px;">
+                    <hr class="header-hr">
+                </div>
+                <div class="col-md-4" style="padding:0px;">
+                    <h2 class="header">专业网络知识汇总</h2>
+                </div>
+                <div class="col-md-4" style="padding:0px;">
+                    <hr class="header-hr">
+                </div>
+            </div>
+            <div class="row " style="margin-top:5px;">
+                <div class="col-md-12 text-center">
+                    <p class="index_more"><%= link_to("查看更多", netinfo_afterindex_path(:subcate => "网络1")  )%></li>
+                </p>
+            </div>
+        </div>
+        <!-- post -->
+        <div class="row space-30">
+            <% @posts.each do |post| %>
+                <div class="col-md-6 text-left">
+                    <p  class="post-link" data-toggle="collapse" data-target="#<%= post.id %>"><%= post.title%>
+                        <!-- <i class="fa fa-plus pull-right" style="color:#e2e2e2;" aria-hidden="true"></i> -->
+                        <img src="https://ww3.sinaimg.cn/large/006tNc79ly1fhg0pdxya9j300e00e0i2.jpg" class="pull-right" style="padding:4px 0px;" alt="plus">
+                    </p>
+                    <div id="<%= post.id %>" class="collapse post-collapse">
+                        <p style="margin-bottom:40px;"> <%= (truncate(strip_tags(post.description), :length => 100, :omission => '...')).html_safe %></p>
+                        <a href="posts/<%= post.id %>" class="pull-right more"><span style="font-size:13px;">查看详情</span></a>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="space-50">
+    </div>
+</div>
+</div>
+<!-- hr -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <hr style="margin:30px 0px 0px 0px;border-top: 1px solid #eeeeee;">
+        </div>
+    </div>
+</div>
