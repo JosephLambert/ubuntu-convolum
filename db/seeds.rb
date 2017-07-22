@@ -10,7 +10,7 @@ u.save
 create_intro = for i in 1..16 do
                    Intro.create!([
                                      link: '#',
-                                     image: 'https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg'
+                                     image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg')
                                  ])
 end
 
@@ -30,7 +30,7 @@ Post.create!(
     subcate: '无线1',
     is_hidden: false,
     slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: 'https://ww2.sinaimg.cn/large/006tKfTcly1fhrlld5xuvj30by04qgo2.jpg'
+    postpic: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlld5xuvj30by04qgo2.jpg')
 )
 
 Post.create!(
@@ -40,7 +40,7 @@ Post.create!(
 
     is_hidden: false,
     slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: 'https://ww3.sinaimg.cn/large/006tKfTcly1fhrlm9of0sj30by04qdhr.jpg'
+    postpic: open('https://ww3.sinaimg.cn/large/006tKfTcly1fhrlm9of0sj30by04qdhr.jpg')
 )
 
 Post.create!(
@@ -50,7 +50,7 @@ Post.create!(
 
     is_hidden: false,
     slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: 'https://ww2.sinaimg.cn/large/006tKfTcly1fhrlmmfoh8j30by04q0v4.jpg'
+    postpic: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlmmfoh8j30by04q0v4.jpg')
 )
 
 # 无线知识跟网络知识
