@@ -8,7 +8,7 @@ u.save
 # intro1
 Intro.create!(
     link: '/plansintroduction/posts',
-    image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg')
+    image: 'https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg'
 )
 
 # intro2
