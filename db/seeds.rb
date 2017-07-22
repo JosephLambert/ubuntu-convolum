@@ -5,101 +5,14 @@ u.password_confirmation = '123456'
 u.is_admin = true
 u.save
 
-# intro1
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: 'https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg'
-)
+# intro1-16
 
-# intro2
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrl8p4cm3j30eq07ignd.jpg')
-)
-
-# intro3
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrl902dusj30eq07ita4.jpg')
-)
-
-# intro4
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrl9ab3vaj30eq07i79w.jpg')
-)
-
-# intro5
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww3.sinaimg.cn/large/006tKfTcly1fhrl9itkmkj30g307odgy.jpg')
-)
-
-# intro6
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhrl9uvhh6j30g307oab8.jpg')
-)
-
-# intro7
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhrla49nrej30860g4jsb.jpg')
-)
-
-# intro8
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhrlae3e0ij30c706d0uq.jpg')
-)
-
-# intro9
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrlan1fdgj30c706dtbd.jpg')
-)
-
-# intro10
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlaxxy28j30cx09btdd.jpg')
-)
-
-# intro11
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrlb7fhl3j30g307odky.jpg')
-)
-
-# intro12
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww3.sinaimg.cn/large/006tKfTcly1fhrlbl9wauj30g307on0l.jpg')
-)
-
-# intro13
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrlbwdrd2j30860g476l.jpg')
-)
-
-# intro14
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhrlc7dg3rj30g307odky.jpg')
-)
-
-# intro15
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww1.sinaimg.cn/large/006tKfTcly1fhrlcngssmj30g307on0l.jpg')
-)
-
-# intro16
-Intro.create!(
-    link: '/plansintroduction/posts',
-    image: open('https://ww3.sinaimg.cn/large/006tKfTcly1fhrlcxiapyj30860g476l.jpg')
-)
+create_intro = for i in 1..16 do
+                   Intro.create!([
+                                     link: '#',
+                                     image: 'https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg'
+                                 ])
+end
 
 # 视频
 Video.create!(
