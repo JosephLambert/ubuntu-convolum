@@ -30,7 +30,7 @@ Post.create!(
     subcate: '无线1',
     is_hidden: false,
     slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlld5xuvj30by04qgo2.jpg')
+    postpic: 'https://ww2.sinaimg.cn/large/006tKfTcly1fhrlld5xuvj30by04qgo2.jpg'
 )
 
 Post.create!(
@@ -40,7 +40,7 @@ Post.create!(
 
     is_hidden: false,
     slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: open('https://ww3.sinaimg.cn/large/006tKfTcly1fhrlm9of0sj30by04qdhr.jpg')
+    postpic: 'https://ww3.sinaimg.cn/large/006tKfTcly1fhrlm9of0sj30by04qdhr.jpg'
 )
 
 Post.create!(
@@ -50,7 +50,7 @@ Post.create!(
 
     is_hidden: false,
     slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlmmfoh8j30by04q0v4.jpg')
+    postpic: 'https://ww2.sinaimg.cn/large/006tKfTcly1fhrlmmfoh8j30by04q0v4.jpg'
 )
 
 # 无线知识跟网络知识
