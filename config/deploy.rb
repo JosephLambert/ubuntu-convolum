@@ -13,7 +13,7 @@ require 'mina/rbenv' # for rbenv support. (https://rbenv.org)
 
 set :application_name, 'convolum'
 set :domain, 'apps@39.108.4.254'
-set :deploy_to, '/var/www/pets-home-again'
+set :deploy_to, '/var/www/convolum'
 set :repository, 'git@github.com:JosephLambert/jdstore-mogai.git'
 set :branch, 'master'
 
