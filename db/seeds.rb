@@ -7,7 +7,12 @@ u.save
 
 # intro1-16
 
-create_intro = for i in 1..16 do
+Intro.create!([
+                  link: '#'
+
+              ])
+
+create_intro = for i in 1..15 do
                    Intro.create!([
                                      link: '#',
                                      image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg')

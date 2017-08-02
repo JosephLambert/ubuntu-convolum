@@ -4,6 +4,11 @@
             <%= link_to @intro1.link, target: "_blank" do %>
                 <%= image_tag(@intro1.image.ad1, :class => "width-100") %>
             <% end %>
+            <% if @intro1.image.present? %>
+                <%= image_tag(@intro1.image.ad1, :class => "width-100") %>
+            <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "1425701") %>
+            <% end %>
         </div>
     </div>
     <div class="row" style="margin-top:6px;">
