@@ -8,7 +8,11 @@
                 <div class="col-md-8 space-20">
                     <!-- Trigger the modal with a pic & link -->
                     <div class="cpad" data-toggle="modal" data-target="#wirelessvideo">
-                        <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
+                        <% if @intro11.image.present? %>
+                            <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
+                        <% else %>
+                            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic579276") %>
+                        <% end %>
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="wirelessvideo" role="dialog">
@@ -21,14 +25,22 @@
                     </div>
                     <div class="cpad" style="margin-top:10px;">
                         <%= link_to @intro12.link, target: "_blank" do %>
-                            <%= image_tag(@intro12.image.ad3, :class => "width-100") %>
+                            <% if @intro12.image.present? %>
+                                <%= image_tag(@intro12.image.ad3, :class => "width-100") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic579276") %>
+                            <% end %>
                         <% end %>
                     </div>
                 </div>
                 <div class="col-md-4" style="padding-left:6px;">
                     <div class="cpad-v space-20">
                         <%= link_to @intro13.link, target: "_blank" do %>
-                            <%= image_tag(@intro13.image.ad4, :class => "width-100") %>
+                            <% if @intro13.image.present? %>
+                                <%= image_tag(@intro13.image.ad4, :class => "width-100") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic294580") %>
+                            <% end %>
                         <% end %>
                     </div>
                 </div>

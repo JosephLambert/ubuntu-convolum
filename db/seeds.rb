@@ -7,15 +7,9 @@ u.save
 
 # intro1-16
 
-Intro.create!([
-                  link: '#'
-
-              ])
-
-create_intro = for i in 1..15 do
+create_intro = for i in 1..16 do
                    Intro.create!([
-                                     link: '#',
-                                     image: open('https://ww4.sinaimg.cn/large/006tKfTcly1fhqp3susrfj313l0jhk8w.jpg')
+                                     link: '#'
                                  ])
 end
 
@@ -34,8 +28,7 @@ Post.create!(
     category: '方案',
     subcate: '无线1',
     is_hidden: false,
-    slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlld5xuvj30by04qgo2.jpg')
+    slogan: '汇聚专业知识，快速帮你找到解决方案'
 )
 
 Post.create!(
@@ -44,8 +37,7 @@ Post.create!(
     category: '方案',
 
     is_hidden: false,
-    slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: open('https://ww3.sinaimg.cn/large/006tKfTcly1fhrlm9of0sj30by04qdhr.jpg')
+    slogan: '汇聚专业知识，快速帮你找到解决方案'
 )
 
 Post.create!(
@@ -54,8 +46,7 @@ Post.create!(
     category: '方案',
 
     is_hidden: false,
-    slogan: '汇聚专业知识，快速帮你找到解决方案',
-    postpic: open('https://ww2.sinaimg.cn/large/006tKfTcly1fhrlmmfoh8j30by04q0v4.jpg')
+    slogan: '汇聚专业知识，快速帮你找到解决方案'
 )
 
 # 无线知识跟网络知识

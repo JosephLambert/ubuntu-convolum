@@ -9,19 +9,31 @@
                 <div class="col-md-8 space-20">
                     <div class="cpad">
                         <%= link_to @intro5.link, target: "_blank" do %>
-                            <%= image_tag(@intro5.image.ad3, :class => "width-100") %>
+                            <% if @intro5.image.present? %>
+                                <%= image_tag(@intro5.image.ad3, :class => "width-100") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic579276") %>
+                            <% end %>
                         <% end %>
                     </div>
                     <div class="cpad" style="margin-top:10px;">
                         <%= link_to @intro6.link, target: "_blank" do %>
-                            <%= image_tag(@intro6.image.ad3, :class => "width-100") %>
+                            <% if @intro6.image.present? %>
+                                <%= image_tag(@intro6.image.ad3, :class => "width-100") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic579276") %>
+                            <% end %>
                         <% end %>
                     </div>
                 </div>
                 <div class="col-md-4" style="padding-left:6px;">
                     <div class="cpad-v space-20">
                         <%= link_to @intro7.link, target: "_blank" do %>
-                            <%= image_tag(@intro7.image.ad4, :class => "width-100") %>
+                            <% if @intro7.image.present? %>
+                                <%= image_tag(@intro7.image.ad4, :class => "width-100") %>
+                            <% else %>
+                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic294580") %>
+                            <% end %>
                         <% end %>
                     </div>
                 </div>
@@ -130,12 +142,20 @@
             <div class="row space-30">
                 <div class="col-md-6">
                     <%= link_to @intro8.link, target: "_blank" do %>
-                        <%= image_tag(@intro8.image.ad5, :class => "width-100") %>
+                        <% if @intro8.image.present? %>
+                            <%= image_tag(@intro8.image.ad5, :class => "width-100") %>
+                        <% else %>
+                            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic439229") %>
+                        <% end %>
                     <% end %>
                 </div>
                 <div class="col-md-6">
                     <%= link_to @intro9.link, target: "_blank" do %>
-                        <%= image_tag(@intro9.image.ad5, :class => "width-100") %>
+                        <% if @intro9.image.present? %>
+                            <%= image_tag(@intro9.image.ad5, :class => "width-100") %>
+                        <% else %>
+                            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic439229") %>
+                        <% end %>
                     <% end %>
                 </div>
             </div>

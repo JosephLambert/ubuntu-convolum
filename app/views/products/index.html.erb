@@ -13,7 +13,11 @@
             <div class="row">
                 <div class="col-md-6" style="padding:0px 5px 0px 0px;">
                     <%= link_to @intro10.link, target: "_blank" do %>
-                        <%= image_tag(@intro10.image.ad6, :class => "width-100") %>
+                        <% if @intro10.image.present? %>
+                            <%= image_tag(@intro10.image.ad6, :class => "width-100") %>
+                        <% else %>
+                            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic465335") %>
+                        <% end %>
                     <% end %>
                 </div>
                 <% @products.each do |product| %>

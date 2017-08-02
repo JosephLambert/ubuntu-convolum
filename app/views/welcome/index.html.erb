@@ -2,29 +2,40 @@
     <div class="row">
         <div class="welcome_p1">
             <%= link_to @intro1.link, target: "_blank" do %>
-                <%= image_tag(@intro1.image.ad1, :class => "width-100") %>
-            <% end %>
-            <% if @intro1.image.present? %>
-                <%= image_tag(@intro1.image.ad1, :class => "width-100") %>
-            <% else %>
-                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic1425701") %>
+                <% if @intro1.image.present? %>
+                    <%= image_tag(@intro1.image.ad1, :class => "width-100") %>
+                <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic1425701") %>
+                <% end %>
             <% end %>
         </div>
     </div>
     <div class="row" style="margin-top:6px;">
         <div class="col-md-4" style="padding: 0px 2px;">
             <%= link_to @intro2.link, target: "_blank" do %>
-                <%= image_tag(@intro2.image.ad2, :class => "width-100") %>
+                <% if @intro2.image.present? %>
+                    <%= image_tag(@intro2.image.ad2, :class => "width-100") %>
+                <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic530270") %>
+                <% end %>
             <% end %>
         </div>
         <div class="col-md-4" style="padding: 0px 2px;">
             <%= link_to @intro3.link, target: "_blank" do %>
-                <%= image_tag(@intro3.image.ad2, :class => "width-100") %>
+                <% if @intro3.image.present? %>
+                    <%= image_tag(@intro3.image.ad2, :class => "width-100") %>
+                <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic530270") %>
+                <% end %>
             <% end %>
         </div>
         <div class="col-md-4" style="padding: 0px 2px;">
             <%= link_to @intro4.link, target: "_blank" do %>
-                <%= image_tag(@intro4.image.ad2, :class => "width-100") %>
+                <% if @intro4.image.present? %>
+                    <%= image_tag(@intro4.image.ad2, :class => "width-100") %>
+                <% else %>
+                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic530270") %>
+                <% end %>
             <% end %>
         </div>
     </div>
