@@ -4,7 +4,7 @@ class Admin::IntrosController < ApplicationController
 
     layout 'admin'
     def index
-        @intros = Intro.all
+        @intros = Intro.order('id ')
      end
 
     def show
