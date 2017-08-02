@@ -31,7 +31,7 @@
                     <%= image_tag @post.postpic.url %><br/>
                 <% end %>
             <% end %>
-            <%= f.input :postpic, :label => "文章封面图"%>
+            <%= f.input :postpic,as: :file, :label => "文章封面图"%>
         </div>
         <div class="group">
             <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'} %>
