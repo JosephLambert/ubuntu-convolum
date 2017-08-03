@@ -5,7 +5,7 @@ class Admin::MessagesController < ApplicationController
     before_action :admin_required
 
     def index
-        @messages = Message.order('id DESC').paginate(page: params[:page], per_page: 10)
+        @messages = Message.order('id DESC').paginate(page: params[:page], per_page: 15)
     end
 
     def show
