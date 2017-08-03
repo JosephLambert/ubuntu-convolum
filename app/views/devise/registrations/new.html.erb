@@ -7,7 +7,7 @@
                     <div class="form-inputs">
                         <%= f.input :email, :label => false, placeholder: "邮箱", error: "请输入您的电子邮箱", required: true, autofocus: true %>
                         <%= f.input :password, :label => false, placeholder: "密码", error: "请输入密码", required: true %>
-                        <%= f.input :password_confirmation, :label => false, placeholder: "确认密码", error: "请确认密码", required: true  %>
+                        <%= f.input :password_confirmation, :label => false, placeholder: "确认密码", error: "请确认已输入的密码", required: true  %>
                     </div>
                     <div class="form-actions">
                         <%= f.button :submit, "注册",class: "button" %>
