@@ -504,3 +504,19 @@ body {
   padding-left: 0;
   list-style: none;
 }
+
+//table
+table{
+    box-shadow: 0 0 3px #999;
+  }
+
+  thead{
+    line-height: 200%;
+    background-color: #02061A;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }

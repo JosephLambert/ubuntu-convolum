@@ -1,13 +1,13 @@
-<h2> 广告列表</h2>
+<h2 style="text-align:center;"> 广告列表</h2>
 <div class="pull-right" style="padding-bottom: 20px;">
-    <%= link_to("新建广告", new_admin_intro_path, class:"btn btn-primary btn-sm")%>
+    <%= link_to("新建广告", new_admin_intro_path, class:"btn btn-primary btn-md ")%>
 </div>
-<table class="table table-bordered commonlink">
+<table class="table commonlink">
     <thead>
         <tr>
-            <th>#</th>
-            <th width="220px;">Image</th>
-            <th>Link</th>
+            <th>ID</th>
+            <th width="220px;">图片</th>
+            <th>链接</th>
             <th>选项</th>
         </tr>
     </thead>
@@ -28,8 +28,8 @@
                     <%= intro.link %>
                 </td>
                 <td>
-                    <%= link_to("Edit",edit_admin_intro_path(intro))%>
-                    <!-- <%= link_to("Delete", admin_intro_path(intro),method: :delete,:data => { :confirm => "Are you sure?" }) %> -->
+                    <%= link_to("编辑",edit_admin_intro_path(intro))%>
+                    <!-- <%= link_to("删除", admin_intro_path(intro),method: :delete,:data => { :confirm => "Are you sure?" }) %> -->
                 </td>
             </tr>
         <% end %>
