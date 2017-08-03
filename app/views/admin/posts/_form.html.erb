@@ -2,10 +2,10 @@
     <hr style="size:2px" />
     <%= simple_form_for [:admin, @post] do |f| %>
         <div class="group">
-            <%= f.input :title ,:label => "文章标题"%>
+            <%= f.input :title ,:label => "文章标题"%><br>
         </div>
         <div class="group">
-            <%= f.input :slogan ,:label => "宣传语"%>
+            <%= f.input :slogan ,:label => "宣传语"%><br>
         </div>
         <div class="group">
             <% Post::CATEGORY.each do |c| %>
@@ -15,6 +15,7 @@
                 </label>
             <% end %>
         </div>
+        <br>
         <div class="group">
             <% Post::SUBCATE.each do |c| %>
                 <label>
@@ -23,6 +24,7 @@
                 </label>
             <% end %>
         </div>
+        <br>
         <div class="group">
             <% if @post.new_record? %>
             <% else %>
@@ -31,14 +33,23 @@
                     <%= image_tag @post.postpic.url %><br/>
                 <% end %>
             <% end %>
-            <%= f.input :postpic,as: :file, :label => "文章封面图"%>
+            <br>
+            <%= f.input :postpic,as: :file, :label => "上传文章封面图"%>
         </div>
+        <br>
         <div class="group">
             <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'} %>
         </div>
+        <br>
         <div class="group">
             <%= f.input :is_hidden ,:label => "勾选为隐藏"%>
         </div>
-        <%= f.submit "提交", data: { disable_with: "Submitting..." } %>
+        <br>
+        <div class="form-actions">
+            <%= f.submit "提交", class: 'btn btn-md btn-primary' %>
+        </div>
+        <br>
     <% end %>
+    <div class="space-50">
+    </div>
 </div>

@@ -7,7 +7,7 @@
         <tr>
             <th>ID</th>
             <th>文章标题</th>
-            <th>分类</th>
+            <th>分类-子分类</th>
             <th>选项</th>
         </tr>
     </thead>
@@ -22,7 +22,7 @@
                     <%= link_to(post.title, admin_post_path(post)) %>
                 </td>
                 <td>
-                    <%= post.category %>
+                    <%= post.category %>-<%= post.subcate %>
                 </td>
                 <td>
                     <%= link_to("编辑", edit_admin_post_path(post)) %> |
