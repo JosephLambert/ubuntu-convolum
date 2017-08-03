@@ -4,13 +4,15 @@
         <%= f.input :link, :label => "图片链接" %>
         <!-- 上傳圖片 -->
         <% if @intro.image.present? %>
-            <%= image_tag(@intro.image.url, :class => "width-100") %>
+            <%= image_tag(@intro.image.url, :class => "width-100") %><br>
         <% end %>
         <%= f.label "上传图片" %><br>
-        <%= f.file_field :image %>
+        <%= f.file_field :image %><br>
         <!-- 廣告隱藏與否 -->
         <div class="form-actions">
-            <%= f.submit "提交", class: 'btn btn-md btn-default' %>
+            <%= f.submit "提交", class: 'btn btn-md btn-primary' %>
         </div>
     <% end %>
+    <div class="space-50">
+    </div>
 </div>
