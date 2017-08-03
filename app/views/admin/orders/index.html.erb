@@ -1,8 +1,8 @@
-<h2>订单列表</h2>
-<table class="table table-bordered commonlink">
+<h2 style="text-align:center;" class="space-50">订单列表</h2>
+<table class="table commonlink">
     <thead>
         <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>生成时间</th>
             <th>订购者</th>
             <th>订单状态</th>
@@ -19,4 +19,6 @@
         <% end %>
     </tbody>
 </table>
-<%= will_paginate @orders , class: "apple_pagination"%>
+<%= will_paginate @orders , class: "apple_pagination_white"%>
+<div class="space-50">
+</div>

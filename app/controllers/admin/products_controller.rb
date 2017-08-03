@@ -5,7 +5,7 @@ class Admin::ProductsController < ApplicationController
     layout 'admin'
 
     def index
-        @products = Product.order('position ASC').paginate(page: params[:page], per_page: 5)
+        @products = Product.order('position ASC').paginate(page: params[:page], per_page: 10)
      end
 
     def show
