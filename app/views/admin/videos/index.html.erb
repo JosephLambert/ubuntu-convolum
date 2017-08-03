@@ -1,11 +1,11 @@
-<h2> 视频 List </h2>
+<h2 style="text-align:center;" class="space-50"> 视频列表</h2>
 <div class="pull-right" style="padding-bottom: 20px;">
-    <%= link_to("新建视频", new_admin_video_path, class:"btn btn-primary btn-sm")%>
+    <%= link_to("新建视频", new_admin_video_path, class:"btn btn-primary btn-md ")%>
 </div>
-<table class="table table-bordered commonlink">
+<table class="table commonlink">
     <thead>
         <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>标题</th>
             <th>选项</th>
         </tr>
@@ -20,7 +20,7 @@
                     <%= video.name %>
                 </td>
                 <td>
-                    <%= link_to("Edit",edit_admin_video_path(video))%>
+                    <%= link_to("编辑",edit_admin_video_path(video))%>
                     <!-- <%= link_to("Delete", admin_video_path(video),method: :delete,:data => { :confirm => "Are you sure?" }) %> -->
                 </td>
             </tr>
