@@ -19,6 +19,8 @@
 @import "font-awesome";
 
 
+
+
 //--------pagination style---------------
 
 
@@ -171,7 +173,7 @@
 
    .navbar-default .navbar-brand {
      color: #2196F3;//字体颜色
-     padding: 10px 15px;//上下10px,左右15px
+     padding: 15px 15px;//上下10px,左右15px
      line-height: 30px;//文字行高
    }
    .navbar-default .navbar-brand:hover,
@@ -331,3 +333,128 @@ body {
 .logo span{visibility:hidden; color:#000; padding:0px; }
 .logo span img{position: fixed; bottom:50px; width: 114px; height: 108px;}
 .logo:hover span{ position: fixed;top: 0px; left:101px; visibility:visible; }
+
+
+//signup login problems
+
+
+.user_setup{
+  height: 750px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://ww2.sinaimg.cn/large/006tKfTcly1fi6i3fv2sbj30uj0g6wka.jpg');
+}
+
+.user_setup_content{
+  background: #fff;
+  margin-top: 140px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 1px 3px 5px #333;
+  border: 5px solid #555;
+  border-radius: 25px;
+
+  opacity:0.95;
+  filter:alpha(opacity=95);
+
+  h2{
+    text-align: center;
+  }
+
+  .psw{
+    float: right;
+    margin-top: -33px;
+    position: relative;
+  }
+
+  .account{
+    text-align: center;
+  }
+
+  .form-inputs{
+    margin-top: 25px;
+  }
+
+  .form-actions{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+
+    .button{
+      color: #fff;
+      background-color: #4A6BB5;
+      border-color: #4A6BB5;
+      font-size: 16px;
+      letter-spacing: 1px;
+      width: 100%;
+    }
+
+    .button:hover{
+      background-color: #4A99B5;
+      border-color: #4A99B5;
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+
+.account-box{
+  background: image_url("account_background.jpg") no-repeat scroll top center/ cover;
+}
+
+.account-content{
+  background: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-shadow: 1px 3px 5px #333;
+  border: 5px solid #555;
+  border-radius: 25px;
+
+  opacity:0.95;
+  filter:alpha(opacity=95);
+
+  h2{
+    text-align: center;
+  }
+
+  .gender-box {
+    span {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+
+  .phone {
+    width: 65%;
+  }
+
+  .form-inputs{
+    margin-top: 25px;
+  }
+
+  .form-actions{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+
+    .button{
+      color: #fff;
+      background-color: #4A6BB5;
+      border-color: #4A6BB5;
+      font-size: 16px;
+      letter-spacing: 1px;
+      width: 100%;
+    }
+
+    .button:hover{
+      background-color: #4A99B5;
+      border-color: #4A99B5;
+      color: #fff;
+    }
+  }
+}
