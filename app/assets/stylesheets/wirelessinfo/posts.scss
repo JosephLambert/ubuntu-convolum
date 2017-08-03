@@ -148,6 +148,13 @@
   a {
     color:#1690dc;
   }
+
+  a:hover,
+  a:focus {
+    color: #1690dc;
+    text-decoration: underline;
+  }
+
 }
 
 .item_time {

@@ -59,12 +59,12 @@
                         <%= link_to("网络5", netinfo_afterindex_path(:subcate => "网络5")) %>
                     </div>
                 </div>
-                <div class="col-md-10 show-post" style="height:820px;">
+                <div class="col-md-10 show-post commonlink" style="height:820px;">
                     <div class="posts-title-show">
                         <%= @subcate %>
                     </div>
                     <hr style="margin: 25px 42px 25px 42px;">
-                    <div class="posts-index">
+                    <div class="posts-index ">
                         <% @posts.each do |post| %>
                             <div style="padding-bottom:11px;">
                                 <span class="item_time"><%= post.created_at.strftime("%Y/%m/%d") %></span>
