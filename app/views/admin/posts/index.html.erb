@@ -1,14 +1,14 @@
-<h2> Post List </h2>
+<h2 style="text-align:center;" class="space-50">文章列表</h2>
 <div class="pull-right" style="padding-bottom: 20px;">
-    <%= link_to("新增文章", new_admin_post_path, class: "btn btn-primary btn-sm") %>
+    <%= link_to("新增文章", new_admin_post_path, class: "btn btn-primary btn-md") %>
 </div>
-<table class="table table-bordered commonlink">
+<table class="table commonlink">
     <thead>
         <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th> Options</th>
+            <th>ID</th>
+            <th>文章标题</th>
+            <th>分类</th>
+            <th>选项</th>
         </tr>
     </thead>
     <tbody>
@@ -25,12 +25,12 @@
                     <%= post.category %>
                 </td>
                 <td>
-                    <%= link_to("Edit", edit_admin_post_path(post)) %> |
-                    <%= link_to("Delete", admin_post_path(post),method: :delete,:data => { :confirm => "Are you sure?" }) %>
+                    <%= link_to("编辑", edit_admin_post_path(post)) %> |
+                    <%= link_to("删除", admin_post_path(post),method: :delete,:data => { :confirm => "Are you sure?" }) %>
                     <% if post.is_hidden %>
-                        <%= link_to("Publish", publish_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
+                        <%= link_to("公开", publish_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
                     <% else %>
-                        <%= link_to("Hide", hide_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
+                        <%= link_to("隐藏", hide_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
                     <% end %>
                     <%= link_to "向上", move_up_admin_post_path(post), method: :patch %>
                     <%= link_to "向下", move_down_admin_post_path(post), method: :patch %>
@@ -39,4 +39,6 @@
         <% end %>
     </tbody>
 </table>
-<%= will_paginate @posts, class: "apple_pagination" %>
+<%= will_paginate @posts, class: "apple_pagination_white" %>
+<div class="space-30">
+</div>

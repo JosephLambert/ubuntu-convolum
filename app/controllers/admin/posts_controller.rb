@@ -4,7 +4,7 @@ class Admin::PostsController < ApplicationController
 
     layout 'admin'
     def index
-        @posts = Post.order('position ASC').paginate(page: params[:page], per_page: 10)
+        @posts = Post.order('position ASC').paginate(page: params[:page], per_page: 15)
     end
 
     def new
