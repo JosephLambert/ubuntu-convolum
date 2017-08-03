@@ -8,20 +8,20 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'true' %>
         <link rel="shortcut icon" href="/favicon.ico">
     </head>
-    <body>
+    <body style="background-color: #fff;">
         <div class="container-fluid" style="min-height:550px;">
             <div class="row" style="margin-bottom:60px;">
                 <%= render "common/navbar" %>
             </div>
             <div class="row">
-                <div class="col-md-2">
-                    <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-                        <li class="active"><%= link_to("产品",admin_products_path )%></li>
-                        <li class="active"><%= link_to("订单",admin_orders_path)%></li>
-                        <li class="active"><%= link_to("文章",admin_posts_path)%></li>
-                        <li class="active"><%= link_to("留言",admin_messages_path)%></li>
+                <div class="col-md-2 nav-sidebar">
+                    <ul class="list-unstyled" style="max-width: 300px;">
                         <li class="active"><%= link_to("广告",admin_intros_path)%></li>
                         <li class="active"><%= link_to("视频",admin_videos_path)%></li>
+                        <li class="active"><%= link_to("文章",admin_posts_path)%></li>
+                        <li class="active"><%= link_to("产品",admin_products_path )%></li>
+                        <li class="active"><%= link_to("订单",admin_orders_path)%></li>
+                        <li class="active"><%= link_to("留言",admin_messages_path)%></li>
                     </ul>
                 </div>
                 <div class="col-md-10">

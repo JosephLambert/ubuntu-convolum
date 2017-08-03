@@ -459,7 +459,7 @@ body {
   }
 }
 
-
+// 链接  黑蓝
 .commonlink {
   a {
     color: #263238;
@@ -474,4 +474,33 @@ body {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
   }
+}
+
+// 后台
+.nav-sidebar {
+  margin-top: 65px;
+
+  span {
+    margin-left: 2.5px;
+  }
+
+  li {
+    max-width: 250px;
+    padding: 12.5px 15px 12.5px 15px;
+    background-color: #546270;
+    border: 1px solid #4a4a4a;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    color: #44c7f4;
+  }
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
 }
