@@ -47,6 +47,7 @@ Rails.application.routes.draw do
         end
         member do
             post :add_to_cart
+            post :instant_buy
         end
     end
 

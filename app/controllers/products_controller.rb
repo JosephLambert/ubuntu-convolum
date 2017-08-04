@@ -27,6 +27,16 @@ class ProductsController < ApplicationController
     end
     end
 
+    def instant_buy
+        @product = Product.find(params[:id])
+        if !current_cart.products.include?(@product)
+            current_cart.add_product_to_cart(@product)
+        else
+            flash[:warning] = '你的购物车已有此物品，快去结账吧'
+        end
+        redirect_to carts_path
+  end
+
     def add_to_cart
         @product = Product.find(params[:id])
         if !current_cart.products.include?(@product)

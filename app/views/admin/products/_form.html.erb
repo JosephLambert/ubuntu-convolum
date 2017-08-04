@@ -10,10 +10,6 @@
         </div>
         <br>
         <div class="group">
-            <%= f.input :description ,:label => "产品描述"%>
-        </div>
-        <br>
-        <div class="group">
             <%= f.input :quantity ,:label => "数量"%>
         </div>
         <br>
@@ -45,7 +41,18 @@
     </div>
         <br>
         <div class="group">
-            <%= f.input :attachment ,:label => "产品PDF"%>
+            <% if @product.new_record? %>
+            <% else %>
+                <% if @product.attachment.present? %>
+                    <span>目前已有商品PDF</span><br>
+                <% end %>
+            <% end %>
+            <br>
+            <%= f.input :attachment ,:label => "上传产品PDF"%>
+        </div>
+        <br>
+        <div class="group">
+            <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'},:label => "产品描述" %>
         </div>
         <br>
         <div class="group">
