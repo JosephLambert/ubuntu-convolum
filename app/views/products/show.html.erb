@@ -55,14 +55,14 @@
                 <div class="action space-20">
                     <div class="col-md-12">
                         <% if @product.quantity.present? && @product.quantity > 0 %>
-                            <%= link_to("立即购买", instant_buy_product_path(@product), class: "buy btn btn-block ",  :method => :post) %>
+                            <%= link_to("立即购买", instant_buy_product_path(@product), class: "buy btn btn-block ", style: "padding-top:6px;", :method => :post) %>
                         <% else %>
                             已销售一空，无法购买
                     <% end %>
                     </div>
                     <div class="col-md-12" >
                         <% if @product.quantity.present? && @product.quantity > 0 %>
-                            <%= link_to("加入购物车", add_to_cart_product_path(@product), class: "add-to-cart btn btn-block ",:method => :post) %>
+                            <%= link_to("加入购物车", add_to_cart_product_path(@product), class: "add-to-cart btn btn-block ",style: "padding-top:6px;",:method => :post) %>
                         <% else %>
                             已销售一空，无法购买
                      <% end %>

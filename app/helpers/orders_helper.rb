@@ -6,4 +6,8 @@ module OrdersHelper
             '未付款'
         end
     end
+
+    def render_order_product_price_count(product_price, quantity)
+        (product_price * quantity).to_s
+  end
 end

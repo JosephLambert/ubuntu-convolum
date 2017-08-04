@@ -41,14 +41,14 @@
                         <div class='form-group'>
                             <!-- 訂購人 -->
                             <legend>付款信息</legend>
-                            <%= f.input :billing_name, placeholder: "姓名", input_html: { class: 'width-50'}, :label => "付款人-姓名" %>
-                            <%= f.input :billing_phone, placeholder: "电话", input_html: {class: 'width-50'}, :label => "付款人-电话" %>
+                            <%= f.input :billing_name, placeholder: "姓名", :label => "付款人-姓名" %>
+                            <%= f.input :billing_phone, placeholder: "电话",  :label => "付款人-电话" %>
                             <hr>
                             <!-- 收貨人 -->
                             <legend>寄送信息</legend>
-                            <%= f.input :shipping_name, placeholder: "姓名", input_html: { class: 'width-50'}, :label => "收件人-姓名" %>
-                            <%= f.input :shipping_phone, placeholder: "电话", input_html: {class: 'width-50'}, :label => "收件人-电话" %>
-                            <%= f.input :shipping_address, placeholder: "地址", input_html: {class: 'width-50'}, :label => "收件人-地址" %>
+                            <%= f.input :shipping_name, placeholder: "姓名",  :label => "收件人-姓名" %>
+                            <%= f.input :shipping_phone, placeholder: "电话",  :label => "收件人-电话" %>
+                            <%= f.input :shipping_address, placeholder: "地址",  :label => "收件人-地址" %>
                             <hr>
                         </div>
                         <!-- 下訂，產生訂單 -->
