@@ -90,9 +90,11 @@ Rails.application.configure do
     ActionMailer::Base.smtp_settings = {
         address: 'smtpcloud.sohu.com',
         port: 25,
-        domain: 'heroku.com',
+        # domain: 'heroku.com',
         authentication: 'login',
         enable_starttls_auto: false,
+        openssl_verify_mode: 'none',
+        domain: 'sEBYi73NkbaXrvbMIFP9SfD9UH0gxHwO.sendcloud.org'
         user_name: ENV['SEND_CLOUD_USER_NAME'],
         password: ENV['SEND_CLOUD_USER_KEY']
     }
