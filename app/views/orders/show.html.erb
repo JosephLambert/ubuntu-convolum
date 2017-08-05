@@ -67,8 +67,8 @@
             </table>
             <% if !@order.is_paid?%>
                 <div class="group center space-50">
-                    <%= link_to("以支付宝付款", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-md btn-primary")%>
-                    <%= link_to("以微信付款", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn btn-md btn-primary")%>
+                    <%= link_to("支付宝付款", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-md btn-primary ")%>
+                    <%= link_to("微信付款", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn btn-md btn-primary")%>
                 </div>
             <% else %>
                 <p class="text-center space-50">此订单已完成付款</p>
