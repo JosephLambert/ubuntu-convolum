@@ -43,6 +43,7 @@
                                         <i class="fa fa-cog"> 后台 </i>
                                     <% end %>
                                 </li>
+                                <li class="divider"> </li>
                             <% end %>
                             <li>
                                 <%= link_to carts_path do %>
@@ -52,6 +53,7 @@
                             <li>
                                 <%= link_to(content_tag(:i, '个人订单', class: 'fa fa-list-ul'), account_orders_path) %>
                             </li>
+                            <li class="divider"> </li>
                             <li>
                                 <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %>
                             </li>
