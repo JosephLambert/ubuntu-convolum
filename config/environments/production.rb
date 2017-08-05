@@ -94,7 +94,7 @@ Rails.application.configure do
         authentication: 'login',
         enable_starttls_auto: false,
         openssl_verify_mode: 'none',
-        domain: 'sEBYi73NkbaXrvbMIFP9SfD9UH0gxHwO.sendcloud.org'
+        domain: '39.108.4.254',
         user_name: ENV['SEND_CLOUD_USER_NAME'],
         password: ENV['SEND_CLOUD_USER_KEY']
     }
