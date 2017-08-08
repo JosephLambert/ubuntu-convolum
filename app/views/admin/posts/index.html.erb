@@ -19,7 +19,7 @@
                 </td>
                 <td>
                     <%= render_post_status(post) %>
-                    <%= link_to(post.title, admin_post_path(post)) %>
+                    <%= link_to(post.title, post_path(post)) %>
                 </td>
                 <td>
                     <%= post.category %>-<%= post.subcate %>
