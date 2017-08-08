@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+    layout 'welcome'
     def index
         @intro1 = Intro.find(1)
         @intro2 = Intro.find(2)

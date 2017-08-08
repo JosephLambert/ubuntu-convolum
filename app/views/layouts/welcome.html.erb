@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Convolum</title>
+        <%= csrf_meta_tags %>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <div class="container-fluid" style="min-height:550px;">
+            <div class="row" style="margin-bottom:60px;">
+                <%= render "common/welcome_navbar" %>
+            </div>
+            <div class="row">
+                <%= yield %>
+            </div>
+        </div>
+        <%= render "common/footer" %>
+    </body>
+</html>
