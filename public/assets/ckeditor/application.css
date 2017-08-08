@@ -2,7 +2,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif;
 }
 
 /* line 6, /Users/yanlei/.rvm/gems/ruby-2.3.1/bundler/gems/ckeditor-752bca97f78e/app/assets/stylesheets/ckeditor/filebrowser/uploader.scss */
@@ -222,4 +223,3 @@ img {
  * the top of the compiled file, but it's generally better to create a new file per style scope.
 
 */
-
