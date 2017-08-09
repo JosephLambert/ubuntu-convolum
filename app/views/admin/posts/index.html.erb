@@ -26,7 +26,9 @@
                 </td>
                 <td>
                     <%= link_to("编辑", edit_admin_post_path(post)) %> |
-                    <%= link_to("删除", admin_post_path(post),method: :delete,:data => { :confirm => "Are you sure?" }) %>
+                    <%if post.id > 7 %>
+                        <%= link_to("删除", admin_post_path(post),method: :delete,:data => { :confirm => "Are you sure?" }) %>
+                    <%end%>
                     <% if post.is_hidden %>
                         <%= link_to("公开", publish_admin_post_path(post) , :method => :post, :class => "btn btn-xs btn-default") %>
                     <% else %>
