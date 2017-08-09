@@ -15,22 +15,23 @@
                         <h4>服务</h4>
                         <ul class="list-unstyled">
                             <!-- <li><%= link_to("代理商查询", root_path )%></li> -->
-                            <li><%= link_to("技术支持", root_path )%></li>
-                            <li><%= link_to("方案资讯", root_path )%></li>
+                            <li><%= link_to("技术支持", Post.find(1) )%></li>
+                            <li><%= link_to("方案资讯", Post.find(2) )%></li>
+                            <li><%= link_to("售后政策", Post.find(3) )%></li>
                         </ul>
                     </div>
                     <div class="col-md-2 col-xs-3">
                         <h4>关于我们</h4>
                         <ul class="list-unstyled">
-                            <li><%= link_to("公司介绍", root_path )%></li>
-                            <li><%= link_to("加入我们", root_path )%></li>
+                            <li><%= link_to("公司介绍", Post.find(4) )%></li>
+                            <li><%= link_to("加入我们", Post.find(5) )%></li>
                         </ul>
                     </div>
                     <div class="col-md-2 col-xs-3">
                         <h4> 商务合作</h4>
                         <ul class="list-unstyled">
-                            <li><%= link_to("开放招商", root_path )%></li>
-                            <li><%= link_to("采购相关", root_path )%></li>
+                            <li><%= link_to("开放招商", Post.find(6) )%></li>
+                            <li><%= link_to("采购相关", Post.find(7) )%></li>
                         </ul>
                     </div>
                     <div class="col-md-3  col-xs-4" style="text-align:right">

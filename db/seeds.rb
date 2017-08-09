@@ -21,6 +21,13 @@ Video.create!(
 Video.create!(
     name: '网络的视频介绍'
 )
+
+# footer 文章
+create_footer_post = for i in 1..7 do
+                         Post.create!([
+
+                                      ])
+end
 # 方案
 Post.create!(
     title: '无线上网解决方案',
@@ -69,7 +76,7 @@ subcate = %w(
     网络5
 )
 
-create_post1 = for i in 1..100 do
+create_post1 = for i in 1..10 do
                    Post.create!([title: "Post no.#{i}",
                                  description: "这是用seeds文件建立的第 #{i} 个公开的文章",
                                  is_hidden: false,
@@ -77,7 +84,7 @@ create_post1 = for i in 1..100 do
                                  subcate: subcate[rand(0..4)]])
 end
 
-create_post2 = for i in 1..100 do
+create_post2 = for i in 1..10 do
                    Post.create!([title: "Post no.#{i}",
                                  description: "这是用seeds文件建立的第 #{i} 个公开的文章",
                                  is_hidden: false,
