@@ -173,8 +173,8 @@
 
    .navbar-default .navbar-brand {
      color: #2196F3;//字体颜色
-     padding: 15px 15px;//上下10px,左右15px
-     line-height: 30px;//文字行高
+
+     line-height: 21px;//文字行高
    }
    .navbar-default .navbar-brand:hover,
    .navbar-default .navbar-brand:focus {
@@ -304,8 +304,8 @@ body {
 .logo{ z-index:0; }
 .logo:hover{ background-color:transparent; z-index:5; }
 .logo span{visibility:hidden; color:#000; padding:0px; }
-.logo span img{position: fixed; bottom:50px; width: 114px; height: 108px;}
-.logo:hover span{ position: fixed;top: 0px; left:101px; visibility:visible; }
+.logo span img{position: fixed; bottom:50px;  width: 114px;height: 108px;}
+.logo:hover span{ position: fixed;top: 0px;left:101px;visibility:visible; }
 
 // .logo { background-color:transparent; z-index:5; }
 // .logo  span{ position: fixed;top: 0px; left:101px; visibility:visible; }
@@ -617,13 +617,37 @@ table{
 
 //zsy-navbar
 @media (min-width: 320px) {
-
+ .zsy-brand {
+   padding-left: 10px;
+ }
+ .zsy-li {
+   padding-left:15px;
+ }
+ .zsy-account {
+   padding-right: 10px;
+ }
 }
 
 @media (min-width: 768px) {
-
+  .zsy-brand {
+    padding-left: 50px;
+  }
+  .zsy-li {
+    padding-left:1px;
+  }
+  .zsy-account {
+    padding-right: 40px;
+  }
 }
 
 @media (min-width: 992px) {
-
+  .zsy-brand {
+    padding-left: 120px;
+  }
+  .zsy-li {
+    padding-left:45px;
+  }
+  .zsy-account {
+    padding-right: 200px;
+  }
 }
