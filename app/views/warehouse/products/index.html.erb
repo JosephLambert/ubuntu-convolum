@@ -43,7 +43,7 @@
 </div>
 <!-- 产品系列 -->
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
         <div class="container-fluid">
             <div class="row space-50">
                 <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right:0px;width:33.2%;">
@@ -64,7 +64,7 @@
             </div>
             <div class="row">
                 <% @productsaw.each do |product| %>
-                    <div class="col-xs-6 col-md-3 text-center" style="width:240px;">
+                    <div class=" col-xs-6 col-sm-3 col-md-3 text-center" style="width:240px;">
                         <div class="space-20">
                         </div>
                         <%= link_to product_path(product) do  %>
@@ -129,18 +129,18 @@
         <!-- Convolum 特色 -->
         <div class="container-fluid">
             <div class="row space-50">
-                <div class="col-md-4" style="padding-right:0px;width:340px;" >
+                <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right:0px;width:33.2%;">
                     <hr class="header-hr">
                 </div>
-                <div class="col-md-4 " style="padding-right:0px;padding-left:0px;width:260px;">
+                <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right:0px;width:33.6%;">
                     <h2 class="header">Convolum 特色</h2>
                 </div>
-                <div class="col-md-4"  style="padding-left:0px;width:340px;">
+                <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right:0px;width:33.2%;">
                     <hr class="header-hr" >
                 </div>
             </div>
             <div class="row space-30">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <%= link_to @intro8.link, target: "_blank" do %>
                         <% if @intro8.image.present? %>
                             <%= image_tag(@intro8.image.ad5, :class => "width-100") %>
@@ -149,7 +149,7 @@
                         <% end %>
                     <% end %>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <%= link_to @intro9.link, target: "_blank" do %>
                         <% if @intro9.image.present? %>
                             <%= image_tag(@intro9.image.ad5, :class => "width-100") %>
