@@ -313,16 +313,17 @@ body {
 
 
 .user_setup{
-  height: 750px;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('https://ww2.sinaimg.cn/large/006tKfTcly1fi6i3fv2sbj30uj0g6wka.jpg');
 }
 
-.user_setup_content{
+.user_setup_content {
   background: #fff;
-  margin-top: 140px;
+  margin-top: 13%;
+  margin-bottom: 13%;
   padding-top: 20px;
   padding-bottom: 20px;
   box-shadow: 1px 3px 5px #333;
@@ -521,9 +522,7 @@ table{
     width: 100%;
   }
 
-  .height-200 {
-    height: 200px;
-  }
+
 
 
 
@@ -534,7 +533,7 @@ table{
 
     }
 
-    h4{
+    .footer-column{
       font-size: 12px;
     }
     .footer {
@@ -564,8 +563,8 @@ table{
 
   }
 
-  h4{
-    font-size: 14px;
+  .footer-column{
+    font-size: 16px;
   }
 
   .footer {
@@ -592,7 +591,7 @@ table{
     padding-top:16px;
 
   }
-  h4{
+  .footer-column{
     font-size: 16px;
   }
   .footer {
@@ -651,5 +650,3 @@ table{
     padding-right: 130px;
   }
 }
-
-// burger icon  adjustment

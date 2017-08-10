@@ -4,7 +4,7 @@
             <div class="col-md-8 col-md-offset-2 col-xs-12 " >
                 <div class="row footer-layout" style="margin-bottom:2.1%;" >
                     <div class="col-md-2 col-xs-3">
-                        <h4>推荐产品</h4>
+                        <h4 class="footer-column">推荐产品</h4>
                         <ul class="list-unstyled">
                             <li><%= link_to("网桥系列", root_path )%></li>
                             <li><%= link_to("AP系列", root_path )%></li>
@@ -12,7 +12,7 @@
                         </ul>
                     </div>
                     <div class="col-md-2 col-xs-3">
-                        <h4>服务</h4>
+                        <h4 class="footer-column">服务</h4>
                         <ul class="list-unstyled">
                             <!-- <li><%= link_to("代理商查询", root_path )%></li> -->
                             <li><%= link_to("技术支持", Post.find(1) )%></li>
@@ -21,14 +21,14 @@
                         </ul>
                     </div>
                     <div class="col-md-2 col-xs-3">
-                        <h4>关于我们</h4>
+                        <h4 class="footer-column">关于我们</h4>
                         <ul class="list-unstyled">
                             <li><%= link_to("公司介绍", Post.find(4) )%></li>
                             <li><%= link_to("加入我们", Post.find(5) )%></li>
                         </ul>
                     </div>
                     <div class="col-md-2 col-xs-3">
-                        <h4> 商务合作</h4>
+                        <h4 class="footer-column"> 商务合作</h4>
                         <ul class="list-unstyled">
                             <li><%= link_to("开放招商", Post.find(6) )%></li>
                             <li><%= link_to("采购相关", Post.find(7) )%></li>
