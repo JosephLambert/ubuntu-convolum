@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-10 col-md-offset-1   bg-white space-50">
-        <div class="preview col-md-7   space-50" >
+        <div class="preview col-md-6   space-50" >
             <div class="preview-pic tab-content" >
                 <% if @product.photos.present? %>
                     <div class="tab-pane active" id="pic-1"><%= image_tag(@product.photos[0].image.medium.url) %></div>
@@ -37,18 +37,17 @@
             </div>
         </div>
         <div class="product-show-part">
-            <div class="product-details col-md-5  space-50 ">
+            <div class="product-details col-md-6  space-50 ">
                 <h3><%= @product.title %></h3>
                 <h4><%= @product.slogan %></h4>
                 <div class="price-service">
-                    <p class="price space-20">售价 <span class="rmb">￥</span><span class="price"><%= @product.price %></span></p>
-                    <p class="service">服务 <span class="service-detail">7天无忧退货 | 48小时快速退款 | 正品保证</span></p>
+                    <p class="price space-20">售价： <span class="rmb">￥</span><span class="price"><%= @product.price %></span></p>
+                    <p class="service">服务： <span class="service-detail">7天退货|1年保修</span></p>
                     <div class="space-30">
                     </div>
                 </div>
                 <div class="quantity-size">
-                    <p class="delivery space-20">类别 <span class="delivery"><%= @product.category %></span></p>
-                    <p class="quantity">库存 <span class="quantity"><%= @product.quantity %></span> </p>
+                    <p class="delivery space-20">类别： <span class="delivery"><%= @product.category %></span></p>
                     <div style="margin-top:200px;">
                     </div>
                 </div>
@@ -70,16 +69,13 @@
                 </div>
                 <div class="row share">
                     <hr />
-                    <div class="col-md-6">
+                    <div class="col-md-6 index_more">
                         <% if @product.attachment.present? %>
                             <i class="fa fa-paperclip"> </i>
-                            <%= link_to("点击下载产品PDF", @product.attachment_url) %>
+                            <%= link_to("下载产品说明书", @product.attachment_url) %>
                         <% else %>
                             暂无产品PDF提供下载
                         <% end %>
-                    </div>
-                    <div class="col-md-6 ">
-                        <p><i class="fa fa-share-alt" aria-hidden="true"></i> 分享 </p>
                     </div>
                 </div>
                 <div class="space-30">

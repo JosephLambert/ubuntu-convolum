@@ -20,7 +20,7 @@ class Product < ApplicationRecord
     mount_uploader :image, ImageUploader
     mount_uploader :attachment, AttachmentUploader
 
-    CATEGORY = %w(aw cw sw).freeze
+    CATEGORY = %w(AW网桥 CW无线路由器 SW交换机).freeze
     validates_inclusion_of :category, in: CATEGORY
 
     validates :title, presence: { message: '请填写产品名称' }
