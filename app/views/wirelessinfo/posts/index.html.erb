@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
         <div class="container-fluid">
             <div class="row">
                 <div class="pwd space-30">
                     <p class="left-15">首页／无线知识</p>
                 </div>
-                <div class="col-md-8 space-20">
+                <div class="col-md-8 col-sm-8 sol-xs-12 space-20">
                     <!-- Trigger the modal with a pic & link -->
                     <div class="cpad" data-toggle="modal" data-target="#wirelessvideo">
                         <% if @intro11.image.present? %>
@@ -16,11 +16,9 @@
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="wirelessvideo" role="dialog">
-                        <div class="col-md-8 col-md-offset-2" style="padding-left:46px;">
-                            <!-- Modal content-->
-                            <div style="margin-top:70px;">
-                                <%= video_tag @video.content_url.to_s ,:controls =>true ,:autoplay => false %>
-                            </div>
+                        <!-- Modal content-->
+                        <div  class="video-position">
+                            <%= video_tag @video.content_url.to_s ,:controls =>true ,:autoplay => false %>
                         </div>
                     </div>
                     <div class="cpad" style="margin-top:10px;">
@@ -33,7 +31,7 @@
                         <% end %>
                     </div>
                 </div>
-                <div class="col-md-4" style="padding-left:6px;">
+                <div class="col-md-4 col-sm-4 sol-xs-12" style="padding-left:6px;">
                     <div class="cpad-v space-20">
                         <%= link_to @intro13.link, target: "_blank" do %>
                             <% if @intro13.image.present? %>
@@ -49,18 +47,16 @@
     </div>
 </div>
 <div class="row  space-30">
-    <div class="col-md-2" style="margin-right:30px;">
-    </div>
-    <div class="col-md-8 bg-white" style="max-width:910px;padding:0px;">
+    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 bg-white wireless-posts-block" >
         <div class="container-fluid">
             <div class="row space-30">
-                <div class="col-md-4" style="padding:0px;">
+                <div class="col-md-4 col-sm-4 col-xs-4" style="padding:0px;width:33.2%;">
                     <hr class="header-hr">
                 </div>
-                <div class="col-md-4" style="padding:0px;">
+                <div class="col-md-4 col-sm-4 col-xs-4" style="padding:0px;width:33.2%;">
                     <h2 class="header">专业无线知识汇总</h2>
                 </div>
-                <div class="col-md-4" style="padding:0px;">
+                <div class="col-md-4 col-sm-4 col-xs-4" style="padding:0px;width:33.2%;">
                     <hr class="header-hr">
                 </div>
             </div>

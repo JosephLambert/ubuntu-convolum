@@ -669,3 +669,46 @@ table{
     font-size: 30px;
     }
 }
+
+//zsy wireless index
+
+@media (min-width: 320px) {
+  .wireless-posts-block {
+margin-left:3%;width:92.5%;
+    }
+}
+
+@media (min-width: 768px) {
+  .wireless-posts-block {
+  margin-left:11.7%;width:76.5%;
+    }
+}
+
+@media (min-width: 992px) {
+  .wireless-posts-block {
+    margin-left:18.7%;width:62.5%;
+    }
+}
+
+//zsy video
+
+@media (min-width: 320px) {
+  .video-position {
+margin-left:0%;
+margin-top: 0%;
+    }
+}
+
+@media (min-width: 768px) {
+  .video-position {
+  margin-left:-1%;
+  margin-top: 8%;
+    }
+}
+
+@media (min-width: 992px) {
+  .video-position {
+    margin-left:18%;
+    margin-top: 5%;
+    }
+}
