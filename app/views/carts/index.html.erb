@@ -11,7 +11,7 @@
                     <% current_cart.cart_items.each do |cart_item| %>
                         <!-- 商品圖片 -->
                         <div class="row commonlink" style="padding-left: 20px;padding-bottom:15px;">
-                            <div class="col-sm-2 ">
+                            <div class="col-sm-2 col-xs-2">
                                 <% if cart_item.product.photos.present? %>
                                     <%= image_tag(cart_item.product.photos[0].image.thumb.url ) %>
                                 <% else %>
@@ -19,11 +19,11 @@
                                 <% end %>
                             </div>
                             <!-- 商品名稱 -->
-                            <div class="name col-sm-5"><%= link_to(cart_item.product.title, product_path(cart_item.product))%></div>
+                            <div class="name col-sm-5 col-xs-3"><%= link_to(cart_item.product.title, product_path(cart_item.product))%></div>
                             <!-- 商品單價 -->
-                            <div class="price col-sm-1">  <%= cart_item.product.price %></div>
+                            <div class="price col-sm-1 col-xs-1">  <%= cart_item.product.price %></div>
                             <!-- 商品數量 -->
-                            <div class="quantity col-sm-2">
+                            <div class="quantity-2 col-sm-2 col-xs-4">
                                 <span>x</span>
                                 <div style="display: inline-block;">
                                     <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
@@ -33,9 +33,9 @@
                                 </div>
                             </div>
                             <!-- 商品總價（單錢 x 數量） -->
-                            <div class="count col-sm-1" ><%= render_product_price_count(cart_item.product,cart_item.quantity) %></div>
+                            <div class="count col-sm-1 col-xs-1" ><%= render_product_price_count(cart_item.product,cart_item.quantity) %></div>
                             <!-- 移除單項商品 -->
-                            <div class="remove col-sm-1">
+                            <div class="remove col-sm-1 col-xs-1">
                                 <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
                                     <i class="fa fa-remove"></i>
                                 <% end %>
