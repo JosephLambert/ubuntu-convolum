@@ -44,18 +44,19 @@
 
 .search-box {
 
-    background-image:url('https://ww3.sinaimg.cn/large/006tNc79ly1fhg1ole2nkj31hc09en79.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 260px;
+    // background-image:url('https://ww3.sinaimg.cn/large/006tNc79ly1fhg1ole2nkj31hc09en79.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // min-height: 260px;
 
+    @media (min-width: 320px){ height: 174px; }
+    @media (min-width: 768px){ height: 210px; }
+    @media (min-width: 992px){ height: 260px; }
+    background: url('https://ww3.sinaimg.cn/large/006tNc79ly1fhg1ole2nkj31hc09en79.jpg') no-repeat scroll top center/ cover;
 
 }
 
-.search-bar {
-  width: 450px;
-  height: 42px;
-}
+
 
 .search-input {
   color: #fff;
@@ -74,7 +75,7 @@
   background-color:transparent;
   border: 1px solid #cdcdcd;
   border-radius: 35px;
-  
+
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */

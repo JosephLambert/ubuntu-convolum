@@ -14,46 +14,45 @@
 <%= render "common/searchbar" %>
 <!-- main part -->
 <div class="row">
-    <div class="col-md-8 col-md-offset-2" style="position:relative;left:0px;top:-60px;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2 show-list" style="height:820px;">
-                    <div class="space-50">
-                    </div>
-                    <div class="show-list-item">
-                        <%= link_to("无线1", wirelessinfo_afterindex_path(:subcate => "无线1") ) %>
-                    </div>
-                    <div class="show-list-item">
-                        <%= link_to("无线2", wirelessinfo_afterindex_path(:subcate => "无线2")) %>
-                    </div>
-                    <div class="show-list-item">
-                        <%= link_to("无线3", wirelessinfo_afterindex_path(:subcate => "无线3")) %>
-                    </div>
-                    <div class="show-list-item">
-                        <%= link_to("无线4", wirelessinfo_afterindex_path(:subcate => "无线4")) %>
-                    </div>
-                    <div class="show-list-item">
-                        <%= link_to("无线5", wirelessinfo_afterindex_path(:subcate => "无线5")) %>
-                    </div>
+    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0  col-xs-offset-0 col-xs-12 afterindex-more" >
+        <div class="row">
+            <div class="col-md-2 col-sm-2 col-xs-2 show-list" style="height:820px;">
+                <div class="space-50">
                 </div>
-                <div class="col-md-10 show-post commonlink" style="height:820px;">
-                    <div class="posts-title-show">
-                        <%= @subcate %>
-                    </div>
-                    <hr style="margin: 25px 42px 25px 42px;">
-                    <div class="posts-index ">
-                        <% @posts.each do |post| %>
-                            <div style="padding-bottom:11px;">
-                                <span class="item_time"><%= post.created_at.strftime("%Y/%m/%d") %></span>
-                                <span class="item_title"><%= link_to(post.title, post_path(post)) %></span>
-                            </div>
-                        <% end %>
-                    </div>
-                    <%= will_paginate @posts , class: " apple_pagination_white"%>
+                <div class="show-list-item">
+                    <%= link_to("无线1", wirelessinfo_afterindex_path(:subcate => "无线1") ) %>
                 </div>
+                <div class="show-list-item">
+                    <%= link_to("无线2", wirelessinfo_afterindex_path(:subcate => "无线2")) %>
+                </div>
+                <div class="show-list-item">
+                    <%= link_to("无线3", wirelessinfo_afterindex_path(:subcate => "无线3")) %>
+                </div>
+                <div class="show-list-item">
+                    <%= link_to("无线4", wirelessinfo_afterindex_path(:subcate => "无线4")) %>
+                </div>
+                <div class="show-list-item">
+                    <%= link_to("无线5", wirelessinfo_afterindex_path(:subcate => "无线5")) %>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-10 col-xs-10 show-post commonlink" style="height:820px;">
+                <div class="posts-title-show">
+                    <%= @subcate %>
+                </div>
+                <hr style="margin: 25px 42px 25px 42px;">
+                <div class="posts-index ">
+                    <% @posts.each do |post| %>
+                        <div style="padding-bottom:11px;">
+                            <span class="item_time"><%= post.created_at.strftime("%Y/%m/%d") %></span>
+                            <span class="item_title"><%= link_to(post.title, post_path(post)) %></span>
+                        </div>
+                    <% end %>
+                </div>
+                <%= will_paginate @posts , class: " apple_pagination_white"%>
             </div>
         </div>
     </div>
+</div>
 </div>
 <div class="space-30">
 </div>

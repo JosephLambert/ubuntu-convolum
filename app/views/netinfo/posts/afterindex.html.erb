@@ -14,10 +14,10 @@
 <%= render "common/searchbar" %>
 <!-- main part -->
 <div class="row">
-    <div class="col-md-8 col-md-offset-2" style="position:relative;left:0px;top:-60px;">
+    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0  col-xs-offset-0 col-xs-12 afterindex-more" >
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2 show-list" style="height:820px;">
+                <div class="col-md-2 col-sm-2 col-xs-2 show-list" style="height:820px;">
                     <div class="space-50">
                     </div>
                     <div class="show-list-item">
@@ -36,7 +36,7 @@
                         <%= link_to("网络5", netinfo_afterindex_path(:subcate => "网络5")) %>
                     </div>
                 </div>
-                <div class="col-md-10 show-post commonlink" style="height:820px;">
+                <div class="col-md-10 col-sm-10 col-xs-10 show-post commonlink" style="height:820px;">
                     <div class="posts-title-show">
                         <%= @subcate %>
                     </div>

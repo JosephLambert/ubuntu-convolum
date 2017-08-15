@@ -690,12 +690,23 @@ margin-left:3%;width:92.5%;
     }
 }
 
-//zsy video
+//zsy video  & search-bar
 
 @media (min-width: 320px) {
   .video-position {
 margin-left:0%;
 margin-top: 0%;
+    }
+    .search-bar-position {
+      margin-left:1%;
+      margin-top: -4%;
+    }
+    .search-bar {
+      width: 370px;
+      height: 42px;
+    }
+    .search-input {
+      width: 370px;
     }
 }
 
@@ -704,6 +715,17 @@ margin-top: 0%;
   margin-left:-1%;
   margin-top: 8%;
     }
+    .search-bar-position {
+      margin-left:21%;
+      margin-top: 0%;
+    }
+    .search-bar {
+      width: 450px;
+      height: 42px;
+    }
+    .search-input {
+      width: 450px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -711,4 +733,38 @@ margin-top: 0%;
     margin-left:18%;
     margin-top: 5%;
     }
+    .search-bar-position {
+      margin-left:31%;
+      margin-top: 0%;
+    }
+    .search-bar {
+      width: 450px;
+      height: 42px;
+    }
+    .search-input {
+      width: 450px;
+    }
+}
+
+//zsy  afterindex
+@media (min-width: 320px) {
+  .afterindex-more {
+
+    }
+
+
+}
+
+@media (min-width: 768px) {
+  .afterindex-more {
+
+    }
+
+}
+
+@media (min-width: 992px) {
+  .afterindex-more {
+    position:relative;left:0px;top:-60px;
+    }
+
 }
