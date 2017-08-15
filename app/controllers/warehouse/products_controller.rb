@@ -5,9 +5,9 @@ class Warehouse::ProductsController < ApplicationController
         @intro7 = Intro.find(7)
         @intro8 = Intro.find(8)
         @intro9 = Intro.find(9)
-        @productsaw = Product.where(category: 'aw').order('position ASC').published.recent
-        @productscw = Product.where(category: 'cw').order('position ASC').published.recent
-        @productssw = Product.where(category: 'sw').order('position ASC').published.recent
+        @productsaw = Product.where(category: 'AW网桥').order('position ASC').published.recent
+        @productscw = Product.where(category: 'CW无线路由器').order('position ASC').published.recent
+        @productssw = Product.where(category: 'SW交换机').order('position ASC').published.recent
     end
 
     def show
