@@ -43,7 +43,7 @@
 </div>
 <!-- 产品系列 -->
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+    <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
         <div class="container-fluid">
             <div class="row space-50">
                 <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right:0px;width:33.2%;">
@@ -64,18 +64,20 @@
             </div>
             <div class="row" >
                 <% @productsaw.each do |product| %>
-                    <div class=" col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 col-md-3 text-center" style="width:240px;">
-                        <div class="space-20">
-                        </div>
-                        <%= link_to product_path(product) do  %>
-                            <% if product.photos.present? %>
-                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
-                            <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
+                    <div class=" col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-4 text-center" >
+                        <div style="max-width:232px;">
+                            <div class="space-20">
+                            </div>
+                            <%= link_to product_path(product) do  %>
+                                <% if product.photos.present? %>
+                                    <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic img-responsive") %>
+                                <% else %>
+                                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic img-responsive") %>
+                                <% end %>
                             <% end %>
-                        <% end %>
-                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
-                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                            <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                            <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                        </div>
                     </div>
                 <% end %>
             </div>
@@ -87,18 +89,20 @@
             </div>
             <div class="row" >
                 <% @productscw.each do |product| %>
-                    <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 col-md-3 text-center" style="width:240px;">
-                        <div class="space-20">
-                        </div>
-                        <%= link_to product_path(product) do  %>
-                            <% if product.photos.present? %>
-                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
-                            <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-4 text-center" >
+                        <div style="max-width:232px;">
+                            <div class="space-20">
+                            </div>
+                            <%= link_to product_path(product) do  %>
+                                <% if product.photos.present? %>
+                                    <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic img-responsive") %>
+                                <% else %>
+                                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic img-responsive") %>
+                                <% end %>
                             <% end %>
-                        <% end %>
-                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
-                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                            <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                            <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                        </div>
                     </div>
                 <% end %>
             </div>
@@ -110,18 +114,20 @@
             </div>
             <div class="row">
                 <% @productssw.each do |product| %>
-                    <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 col-md-3 text-center" style="width:240px;">
-                        <div class="space-20">
-                        </div>
-                        <%= link_to product_path(product) do  %>
-                            <% if product.photos.present? %>
-                                <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic") %>
-                            <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic") %>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-4 text-center" >
+                        <div style="max-width:232px;">
+                            <div class="space-20">
+                            </div>
+                            <%= link_to product_path(product) do  %>
+                                <% if product.photos.present? %>
+                                    <%= image_tag(product.photos[0].image.thumb.url , class: "show-pic img-responsive") %>
+                                <% else %>
+                                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "show-pic img-responsive") %>
+                                <% end %>
                             <% end %>
-                        <% end %>
-                        <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
-                        <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                            <p class="bg-white show-slogan product-title"> <%= product.title %> </p>
+                            <p class="bg-white show-slogan-2 product-slogan"> <%= product.slogan %> </p>
+                        </div>
                     </div>
                 <% end %>
             </div>
