@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170804015030) do
+ActiveRecord::Schema.define(version: 20170815124956) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -138,6 +138,7 @@ ActiveRecord::Schema.define(version: 20170804015030) do
     t.boolean  "is_hidden",   default: true
     t.integer  "position"
     t.string   "slogan"
+    t.text     "feature"
   end
 
   create_table "users", force: :cascade do |t|
