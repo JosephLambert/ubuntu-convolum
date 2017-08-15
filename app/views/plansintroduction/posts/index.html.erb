@@ -7,40 +7,42 @@
                 </div>
                 <div class="row">
                     <% @posts.each do |post| %>
-                        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-0 text-center" style="width:463px;">
-                            <div style="margin-top:35px;">
-                            </div>
-                            <!-- 文章标题  宣传语-->
-                            <p class="bg-white post-title"> <%= post.title %> </p>
-                            <p class="bg-white post-slogan"> <%= post.slogan %> </p>
-                            <div class="container-fluid" style="width:430px;margin-left:12px;">
-                                <div class="row" style="background-color:#fff;">
-                                    <!-- 浏览量 -->
-                                    <div class="col-md-3 col-md-offset-3 visit">
-                                        <div class="pi-thumbs-up">
-                                            <i class="fa fa-eye" , style="color:#878787;"></i>
-                                            <span> <%=  post.impressionist_count(:filter=>:session_hash) %></span>
+                        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-0 text-center" >
+                            <div style="max-width:430px;">
+                                <div style="margin-top:35px;">
+                                </div>
+                                <!-- 文章标题  宣传语-->
+                                <p class="bg-white post-title"> <%= post.title %> </p>
+                                <p class="bg-white post-slogan"> <%= post.slogan %> </p>
+                                <div class="container-fluid" style="width:100%;margin-left:12px;">
+                                    <div class="row" style="background-color:#fff;">
+                                        <!-- 浏览量 -->
+                                        <div class="col-md-3 col-md-offset-3 visit">
+                                            <div class="pi-thumbs-up">
+                                                <i class="fa fa-eye" , style="color:#878787;"></i>
+                                                <span> <%=  post.impressionist_count(:filter=>:session_hash) %></span>
+                                            </div>
+                                        </div>
+                                        <!-- 点赞 -->
+                                        <div class="col-md-3 upvote" style="padding-left:17px;">
+                                            <%= link_to like_plansintroduction_post_path(post), method: :put do %>
+                                                <div class="pi-thumbs-up">
+                                                    <i class="fa fa-thumbs-up" , style="color:#878787;"></i>
+                                                    <span> <%= post.get_upvotes.size %></span>
+                                                </div>
+                                            <% end %>
                                         </div>
                                     </div>
-                                    <!-- 点赞 -->
-                                    <div class="col-md-3 upvote" style="padding-left:22px;">
-                                        <%= link_to like_plansintroduction_post_path(post), method: :put do %>
-                                            <div class="pi-thumbs-up">
-                                                <i class="fa fa-thumbs-up" , style="color:#878787;"></i>
-                                                <span> <%= post.get_upvotes.size %></span>
-                                            </div>
-                                        <% end %>
-                                    </div>
                                 </div>
-                            </div>
-                            <!-- 文章封面 -->
-                            <%= link_to plansintroduction_post_path(post) do  %>
-                                <% if post.postpic.present? %>
-                                    <%= image_tag(post.postpic.url , class: "post-pic ") %>
-                                <% else %>
-                                    <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79ly1fha95j607vj30by04qq32.jpg", class: "post-pic") %>
+                                <!-- 文章封面 -->
+                                <%= link_to plansintroduction_post_path(post) do  %>
+                                    <% if post.postpic.present? %>
+                                        <%= image_tag(post.postpic.url , class: "post-pic  img-responsive") %>
+                                    <% else %>
+                                        <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79ly1fha95j607vj30by04qq32.jpg", class: "post-pic img-responsive") %>
+                                    <% end %>
                                 <% end %>
-                            <% end %>
+                            </div>
                         </div>
                     <% end %>
                 </div>

@@ -1,17 +1,17 @@
 <div class="jumbotron" style="border-radius: 0px;">
 </div>
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 text-center">
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4">
+                <div class="col-md-4 col-md-offset-4 ">
                     <h2 class="header">热卖产品</h2>
                 </div>
             </div>
             <div class="space-30">
             </div>
             <div class="row">
-                <div class="col-md-6" style="padding:0px 5px 0px 0px;">
+                <div class="col-md-6 col-sm-12 col-xs-12" style="padding:10px 5px 0px 0px;">
                     <%= link_to @intro10.link, target: "_blank" do %>
                         <% if @intro10.image.present? %>
                             <%= image_tag(@intro10.image.ad6, :class => "width-100") %>
@@ -21,17 +21,19 @@
                     <% end %>
                 </div>
                 <% @products.each do |product| %>
-                    <div class="col-xs-6 col-md-3 text-center" style="padding:0px 5px;margin-bottom:10px;">
-                        <%= link_to product_path(product) do  %>
-                            <% if product.photos.present? %>
-                                <%= image_tag(product.photos[0].image.thumb.url , class: "product-show-pic img-responsive") %>
-                            <% else %>
-                                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "product-show-pic img-responsive") %>
+                    <div class="col-xs-offset-0 col-xs-6 col-sm-4 col-sm-offset-0 col-md-3 text-center" style="padding:0px 5px;margin-top:10px;">
+                        <div style="max-width:225px;">
+                            <%= link_to product_path(product) do  %>
+                                <% if product.photos.present? %>
+                                    <%= image_tag(product.photos[0].image.thumb.url , class: "product-show-pic img-responsive") %>
+                                <% else %>
+                                    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "product-show-pic img-responsive") %>
+                                <% end %>
                             <% end %>
-                        <% end %>
-                        <p class="bg-white product-show-slogan product-title2"> <%= product.title %> </p>
-                        <p class="bg-white product-show-slogan-2 product-slogan2"> <%= product.slogan %> </p>
-                        <p class="bg-white product-show-slogan-2 product-price2"> ¥ <%= product.price %> </p>
+                            <p class="bg-white product-show-slogan product-title2"> <%= product.title %> </p>
+                            <p class="bg-white product-show-slogan-2 product-slogan2"> <%= product.slogan %> </p>
+                            <p class="bg-white product-show-slogan-2 product-price2"> ¥ <%= product.price %> </p>
+                        </div>
                     </div>
                 <% end %>
             </div>

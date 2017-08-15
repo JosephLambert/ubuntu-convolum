@@ -50,7 +50,7 @@
     padding-left: 16px;
     line-height: 1.42857143;
     background-color: #fff;
-    border: 0px solid #ddd;
+    border: 0px solid #fff;
     border-radius: 0px;
     -webkit-transition: border 0.2s ease-in-out;
     -o-transition: border 0.2s ease-in-out;
@@ -60,11 +60,13 @@
 .show-slogan {
   padding-bottom: 10px;
   margin-bottom: 0px;
+  border: 1px solid #fff;
 }
 
 .show-slogan-2 {
   padding-bottom: 25px;
   margin-bottom: 0px;
+  border: 1px solid #fff;
 }
 
 .product-title {
