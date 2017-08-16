@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
         @message = Message.new(message_params)
 
         if @message.save
-            redirect_to :back
+            redirect_to root_path
             flash[:notice] = '您已成功提交问题或者建议'
         else
             redirect_to :back

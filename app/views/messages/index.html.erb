@@ -1,13 +1,24 @@
-<h2> New Message </h2>
-<%= simple_form_for @message do |f| %>
-    <div class="group">
-        <%= f.input :name ,:label => "姓名"%>
+<div class="container space-30">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+            <h2 class="center"><i class="fa fa-question" aria-hidden="true"></i> 我要提问</h2>
+            <div class="order-form">
+                <%= simple_form_for @message do |f| %>
+                    <div class='form-group'>
+                        <%= f.input :name ,placeholder: "姓名",:label => "姓名"%>
+                        <%= f.input :email ,placeholder: "邮箱",:label => "邮箱"%>
+                        <%= f.input :comment ,placeholder: "内容",:label => "问题或者建议"%>
+                        <hr class="space-30" style="
+                            height: 2.5px;
+                            background-color: #666 !important;
+                            margin-bottom: 15px;
+                          ">
+                    </div>
+                    <div class='form-actions center'>
+                        <%= f.submit "提 交", data: { disable_with: "提交中..." }, class: 'btn btn-md btn-primary' %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
     </div>
-    <div class="group">
-        <%= f.input :email ,:label => "邮箱"%>
-    </div>
-    <div class="group">
-        <%= f.input :comment ,:label => "问题或者建议"%>
-    </div>
-    <%= f.submit "提交", data: { disable_with: "Submitting..." } %>
-<% end %>
+</div>
