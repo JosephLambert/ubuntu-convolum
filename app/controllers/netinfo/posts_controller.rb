@@ -1,8 +1,8 @@
 class Netinfo::PostsController < ApplicationController
     def index
+        @intro13 = Intro.find(13)
         @intro14 = Intro.find(14)
         @intro15 = Intro.find(15)
-        @intro16 = Intro.find(16)
         @posts = Post.where(category: '网络知识').published.order('position ASC').limit(12)
         @video = Video.find(2)
     end

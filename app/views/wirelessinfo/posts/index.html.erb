@@ -8,8 +8,8 @@
                 <div class="col-md-8 col-sm-8 sol-xs-12 space-20">
                     <!-- Trigger the modal with a pic & link -->
                     <div class="cpad" data-toggle="modal" data-target="#wirelessvideo">
-                        <% if @intro11.image.present? %>
-                            <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
+                        <% if @intro10.image.present? %>
+                            <%= image_tag(@intro10.image.ad3, :class => "width-100") %>
                         <% else %>
                             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic579276") %>
                         <% end %>
@@ -22,9 +22,9 @@
                         </div>
                     </div>
                     <div class="cpad" style="margin-top:10px;">
-                        <%= link_to @intro12.link, target: "_blank" do %>
-                            <% if @intro12.image.present? %>
-                                <%= image_tag(@intro12.image.ad3, :class => "width-100") %>
+                        <%= link_to @intro11.link, target: "_blank" do %>
+                            <% if @intro11.image.present? %>
+                                <%= image_tag(@intro11.image.ad3, :class => "width-100") %>
                             <% else %>
                                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic579276") %>
                             <% end %>
@@ -33,9 +33,9 @@
                 </div>
                 <div class="col-md-4 col-sm-4 sol-xs-12" style="padding-left:6px;">
                     <div class="cpad-v space-20">
-                        <%= link_to @intro13.link, target: "_blank" do %>
-                            <% if @intro13.image.present? %>
-                                <%= image_tag(@intro13.image.ad4, :class => "width-100") %>
+                        <%= link_to @intro12.link, target: "_blank" do %>
+                            <% if @intro12.image.present? %>
+                                <%= image_tag(@intro12.image.ad4, :class => "width-100") %>
                             <% else %>
                                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "pic294580") %>
                             <% end %>

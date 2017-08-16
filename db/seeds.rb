@@ -7,7 +7,7 @@ u.save
 
 # intro1-16
 
-create_intro = for i in 1..16 do
+create_intro = for i in 1..15 do
                    Intro.create!([
                                      link: '#'
                                  ])
