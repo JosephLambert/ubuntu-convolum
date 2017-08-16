@@ -76,20 +76,12 @@ Rails.application.routes.draw do
         resources :orders
     end
 
-    namespace :aboutus do
-        resources :posts
-    end
-
     namespace :plansintroduction do
         resources :posts do
             member do
                 put 'like', to: 'posts#upvote'
             end
         end
-    end
-
-    namespace :contactus do
-        resources :posts
     end
 
     namespace :wirelessinfo do
