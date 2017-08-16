@@ -84,18 +84,19 @@ Rails.application.configure do
     # Do not dump schema after migrations.
     config.active_record.dump_schema_after_migration = false
 
-    config.action_mailer.default_url_options = { host: 'http://39.108.4.254/' }
-
+    config.action_mailer.default_url_options = { host: '39.108.4.254' }
     config.action_mailer.delivery_method = :smtp
-    ActionMailer::Base.smtp_settings = {
-        address: 'smtpcloud.sohu.com',
-        port: 25,
-        # domain: 'heroku.com',
-        authentication: 'login',
-        enable_starttls_auto: false,
-        openssl_verify_mode: 'none',
-        # domain: 'sEBYi73NkbaXrvbMIFP9SfD9UH0gxHwO.sendcloud.org',
-        user_name: ENV['SEND_CLOUD_USER_NAME'],
-        password: ENV['SEND_CLOUD_USER_KEY']
-    }
+    config.action_mailer.smtp_settings = config_for(:email).symbolize_keys
+
+    # ActionMailer::Base.smtp_settings = {
+    #     address: 'smtpcloud.sohu.com',
+    #     port: 25,
+    #     # domain: 'heroku.com',
+    #     authentication: 'login',
+    #     enable_starttls_auto: false,
+    #     openssl_verify_mode: 'none',
+    #     # domain: 'sEBYi73NkbaXrvbMIFP9SfD9UH0gxHwO.sendcloud.org',
+    #     user_name: ENV['SEND_CLOUD_USER_NAME'],
+    #     password: ENV['SEND_CLOUD_USER_KEY']
+    # }
 end
