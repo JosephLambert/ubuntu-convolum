@@ -1,3 +1,66 @@
 // Place all the styles related to the yunguanli controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.yunguanli_content {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 10%;
+  margin-bottom: 14%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 1px 3px 5px #333;
+  border: 1px solid rgba(160,156,151,0.5) !important;
+  border-radius: 1px;
+
+  opacity:0.95;
+  filter:alpha(opacity=95);
+
+  h2{
+    text-align: left;
+    font-size: 40px;
+  }
+
+  .psw{
+    float: right;
+    margin-top: -33px;
+    position: relative;
+  }
+
+  .account{
+    text-align: center;
+  }
+
+  .form-inputs{
+    margin-top: 25px;
+  }
+
+  .form-actions{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+
+    .button{
+      color: #fff;
+      background-color: #4A6BB5;
+      border-color: #4A6BB5;
+      font-size: 16px;
+      letter-spacing: 1px;
+      width: 100%;
+    }
+
+    .button:hover{
+      background-color: #4A99B5;
+      border-color: #4A99B5;
+      color: #fff;
+    }
+  }
+}
+
+
+
+.yunguanli{
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://ww3.sinaimg.cn/large/006tNc79ly1fimr1mee7lj30no0dcjri.jpg');
+}
