@@ -2,12 +2,13 @@
     <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
         <div class="container-fluid">
             <div class="row">
+                <!-- 路径 -->
                 <div class="pwd space-30">
                     <p class="left-15">首页／网络知识</p>
                 </div>
                 <div class="col-md-8 col-sm-8 sol-xs-12 space-20">
-                    <!-- Trigger the modal with a pic & link -->
-                    <div class="cpad" data-toggle="modal" data-target="#wirelessvideo">
+                    <!-- 左上视频广告 -->
+                    <div class="cpad box-hover" data-toggle="modal" data-target="#wirelessvideo">
                         <% if @intro13.image.present? %>
                             <%= image_tag(@intro13.image.ad3, :class => "width-100") %>
                         <% else %>
@@ -20,7 +21,8 @@
                             <%= video_tag @video.content_url.to_s ,:controls =>true ,:autoplay => false %>
                         </div>
                     </div>
-                    <div class="cpad" style="margin-top:10px;">
+                    <!-- 左下广告  -->
+                    <div class="cpad box-hover" style="margin-top:10px;">
                         <%= link_to @intro14.link, target: "_blank" do %>
                             <% if @intro14.image.present? %>
                                 <%= image_tag(@intro14.image.ad3, :class => "width-100") %>
@@ -31,7 +33,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 sol-xs-12" style="padding-left:6px;">
-                    <div class="cpad-v space-20">
+                    <!-- 右广告 -->
+                    <div class="cpad-v space-20 box-hover">
                         <%= link_to @intro15.link, target: "_blank" do %>
                             <% if @intro15.image.present? %>
                                 <%= image_tag(@intro15.image.ad4, :class => "width-100") %>
@@ -48,6 +51,7 @@
 <div class="row  space-30">
     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 bg-white wireless-posts-block"  >
         <div class="container-fluid">
+            <!-- 网络知识 标题 -->
             <div class="row space-30">
                 <div class="col-md-4" style="padding:0px;">
                     <hr class="header-hr">
@@ -65,7 +69,7 @@
                 </p>
             </div>
         </div>
-        <!-- post -->
+        <!-- 文章 热度 -->
         <div class="row space-30">
             <% @posts.each do |post| %>
                 <div class="col-md-6 text-left">

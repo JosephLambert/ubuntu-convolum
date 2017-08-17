@@ -829,3 +829,23 @@ margin-top: 0%;
     margin-left:20px;
   }
 }
+
+div.box-hover {
+  img {
+    box-shadow:none;
+  }
+  img:hover,
+  img:active,
+  img:focus {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
+    }
+
+  div {
+    box-shadow:none;
+  }
+  div:hover,
+  div:active,
+  div:focus {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
+    }
+}

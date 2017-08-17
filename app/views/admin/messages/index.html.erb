@@ -1,5 +1,7 @@
 <h2 style="text-align:center;" class="space-50">留言列表</h2>
+<!-- 留言列表 -->
 <table class="table commonlink space-30">
+    <!-- 表头 -->
     <thead>
         <tr>
             <th>ID</th>
@@ -9,6 +11,7 @@
             <th>选项</th>
         </tr>
     </thead>
+    <!-- 表身 -->
     <tbody>
         <% @messages.each do |message| %>
             <tr>
@@ -31,6 +34,7 @@
         <% end %>
     </tbody>
 </table>
+<!-- 分页 -->
 <%= will_paginate @messages, class: "apple_pagination_white" %>
 <div class="space-50">
 </div>

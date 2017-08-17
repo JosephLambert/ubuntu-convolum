@@ -1,13 +1,15 @@
-<!-- 主推产品广告 -->
 <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
         <div class="container-fluid">
             <div class="row">
+                <!-- 路径 -->
                 <div class="pwd space-30">
                     <p class="left-15">首页／产品</p>
                 </div>
+                <!-- 三个广告 -->
                 <div class="col-md-8  col-sm-8  col-xs-12 space-20">
-                    <div class="cpad">
+                    <!-- 左上广告 -->
+                    <div class="cpad box-hover">
                         <%= link_to @intro5.link, target: "_blank" do %>
                             <% if @intro5.image.present? %>
                                 <%= image_tag(@intro5.image.ad3, :class => "width-100") %>
@@ -16,7 +18,8 @@
                             <% end %>
                         <% end %>
                     </div>
-                    <div class="cpad" style="margin-top:1.64%;">
+                    <!-- 左下广告 -->
+                    <div class="cpad box-hover" style="margin-top:1.64%;">
                         <%= link_to @intro6.link, target: "_blank" do %>
                             <% if @intro6.image.present? %>
                                 <%= image_tag(@intro6.image.ad3, :class => "width-100") %>
@@ -26,8 +29,9 @@
                         <% end %>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-12  space-20" style="padding-left:6px;">
-                    <div class="cpad-v ">
+                <!-- 右广告 -->
+                <div class="col-md-4 col-sm-4 col-xs-12  space-20 " style="padding-left:6px;">
+                    <div class="cpad-v box-hover">
                         <%= link_to @intro7.link, target: "_blank" do %>
                             <% if @intro7.image.present? %>
                                 <%= image_tag(@intro7.image.ad4, :class => "width-100") %>
@@ -45,6 +49,7 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
         <div class="container-fluid">
+            <!--系列标题  -->
             <div class="row space-50">
                 <div class="col-md-4 col-sm-4 col-xs-4" style="padding-right:0px;width:33.2%;">
                     <hr class="header-hr">
@@ -64,7 +69,7 @@
             </div>
             <div class="row" >
                 <% @productsaw.each do |product| %>
-                    <div class=" col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 text-center" style="padding:0px 5px;">
+                    <div class=" col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 text-center box-hover" style="padding:0px 5px;">
                         <div style="max-width:232px;">
                             <div class="space-20">
                             </div>
@@ -91,7 +96,7 @@
             </div>
             <div class="row" >
                 <% @productscw.each do |product| %>
-                    <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 text-center"  style="padding:0px 5px;">
+                    <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 text-center box-hover"  style="padding:0px 5px;">
                         <div style="max-width:232px;">
                             <div class="space-20">
                             </div>
@@ -118,7 +123,7 @@
             </div>
             <div class="row">
                 <% @productssw.each do |product| %>
-                    <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 text-center" style="padding:0px 5px;">
+                    <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-3 text-center box-hover" style="padding:0px 5px;">
                         <div style="max-width:232px;">
                             <div class="space-20">
                             </div>
@@ -152,7 +157,8 @@
                 </div>
             </div>
             <div class="row space-30">
-                <div class="col-md-6 col-sm-6 col-xs-12">
+                <!-- 左广告 -->
+                <div class="col-md-6 col-sm-6 col-xs-12 box-hover">
                     <%= link_to @intro8.link, target: "_blank" do %>
                         <% if @intro8.image.present? %>
                             <%= image_tag(@intro8.image.ad5, :class => "width-100") %>
@@ -161,7 +167,8 @@
                         <% end %>
                     <% end %>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
+                <!-- 右广告 -->
+                <div class="col-md-6 col-sm-6 col-xs-12 box-hover">
                     <%= link_to @intro9.link, target: "_blank" do %>
                         <% if @intro9.image.present? %>
                             <%= image_tag(@intro9.image.ad5, :class => "width-100") %>

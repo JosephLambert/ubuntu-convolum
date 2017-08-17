@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+            <!-- 订单明细 -->
             <h3 class="center space-50"><i class='fa fa-list-alt'></i> 订单明细</h3>
             <table class="table table-hover space-30">
                 <thead>
@@ -35,6 +36,7 @@
                     合计： ¥ <%= @order.total %>
                 </span>
             </div>
+            <!-- 付款信息 -->
             <h3 class="center space-50"><i class='fa fa-credit-card'></i> 订单信息</h3>
             <table class='table space-30'>
                 <tbody>
@@ -65,6 +67,7 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- 支付 -->
             <% if !@order.is_paid?%>
                 <div class="group center space-50">
                     <%= link_to("支付宝付款", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-md btn-primary ")%>

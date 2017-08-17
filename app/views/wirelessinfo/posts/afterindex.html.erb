@@ -1,4 +1,4 @@
-<!-- pwd -->
+<!-- 路径 -->
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="container-fluid">
@@ -10,12 +10,13 @@
         </div>
     </div>
 </div>
-<!-- search -->
+<!-- 搜索框 -->
 <%= render "common/searchbar" %>
-<!-- main part -->
+<!-- 分类+目录 -->
 <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0  col-xs-offset-0 col-xs-12 afterindex-more" >
         <div class="row">
+            <!-- 分类 -->
             <div class="col-md-2 col-sm-2 col-xs-2 show-list" style="height:820px;">
                 <div class="space-50">
                 </div>
@@ -35,6 +36,7 @@
                     <%= link_to("无线5", wirelessinfo_afterindex_path(:subcate => "无线5")) %>
                 </div>
             </div>
+            <!-- 目录 -->
             <div class="col-md-10 col-sm-10 col-xs-10 show-post commonlink" style="height:820px;">
                 <div class="posts-title-show">
                     <%= @subcate %>

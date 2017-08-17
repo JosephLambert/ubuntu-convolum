@@ -1,25 +1,31 @@
 <div class="col-md-8 col-md-offset-2">
     <hr style="size:2px" />
     <%= simple_form_for [:admin, @product] do |f| %>
+        <!-- 产品名字 -->
         <div class="group">
             <%= f.input :title ,:label => "产品名称"%>
         </div>
         <br>
+        <!-- 产品宣传页 -->
         <div class="group">
             <%= f.input :slogan ,:label => "宣传语"%>
         </div>
         <br>
+        <!-- 产品数量 -->
         <div class="group">
             <%= f.input :quantity ,:label => "数量"%>
         </div>
         <br>
+        <!-- 产品价格 -->
         <div class="group">
             <%= f.input :price ,:label => "价格"%>
         </div>
+        <!-- 产品特点 -->
         <div class="group">
             <%= f.input :feature ,:label => "特点"%>
         </div>
         <br>
+        <!-- 产品分类 -->
         <div class="group">
             <% Product::CATEGORY.each do |category| %>
                 <label>
@@ -29,6 +35,7 @@
             <% end %>
         </div>
         <br>
+        <!-- 产品图片 -->
         <div class="group">
             <% if @product.new_record? %>
             <% else %>
@@ -40,9 +47,11 @@
                 <% end %>
             <% end %>
             <br>
+            <!-- 上传图片 -->
             <%= f.file_field :image, :multiple => true, name: "photos[image][]" %>（"请上传5张图片"）
     </div>
         <br>
+        <!-- 产品说明书 -->
         <div class="group">
             <% if @product.new_record? %>
             <% else %>
@@ -54,14 +63,17 @@
             <%= f.input :attachment ,:label => "上传产品PDF"%>
         </div>
         <br>
+        <!-- 产品详情 -->
         <div class="group">
             <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'},:label => "产品描述" %>
         </div>
         <br>
+        <!-- 隐藏 -->
         <div class="group">
             <%= f.input :is_hidden ,:label => "勾选为隐藏"%>
         </div>
         <br>
+        <!-- 提交 -->
         <div class="form-actions">
             <%= f.submit "提交", class: 'btn btn-md btn-primary' %>
         </div>

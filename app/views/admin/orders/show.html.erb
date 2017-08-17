@@ -2,6 +2,7 @@
     <div class="col-md-12">
         <h2 class="center">订单明细(<%= render_order_paid_state(@order)%>)</h2>
         <%= render "admin/orders/state_option",order: @order%>
+        <!-- 订单产品信息 -->
         <table class="table">
             <thead>
                 <tr>
@@ -26,11 +27,13 @@
                 <% end %>
             </tbody>
         </table>
+        <!-- 订单总价 -->
         <div class="total clearfix">
             <span class="pull-right">
                 合计：¥ <%= @order.total %>
             </span>
         </div>
+        <!-- 订单寄送信息 -->
         <h2 class="center space-50">寄送信息</h2>
         <table class="table">
             <tbody>

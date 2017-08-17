@@ -2,18 +2,24 @@
     <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 ">
         <div class="container-fluid">
             <div class="row">
+                <!-- 路径 -->
                 <div class="pwd space-30">
                     <p class="left-15" style="margin-bottom:-9px;">首页／方案</p>
                 </div>
+                <!-- 文章列表 -->
                 <div class="row space-50 bg-white " style="margin-left:15px;margin-right:0px;">
                     <% @posts.each do |post| %>
+                        <!-- 循环 文章 item -->
                         <div class="row " style="margin: 35px 0px 40px 22px;">
+                            <!-- 日期 -->
                             <div class="col-sm-3">
                                 <h3> <%= post.created_at.strftime("%Y/%m/%d") %></h3>
                             </div>
+                            <!-- 题目 -->
                             <div class="col-sm-7 commonlink">
                                 <h3 class="post-title"><%= link_to(post.title, post_path(post)) %></h3>
                             </div>
+                            <!-- 访问人数 -->
                             <div class="col-sm-1" >
                                 <div class="visit">
                                     <div class="pi-thumbs-up">
@@ -22,6 +28,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 点赞 -->
                             <div class="col-sm-1">
                                 <!-- 点赞 -->
                                 <div class="upvote">
@@ -37,9 +44,10 @@
                         <hr style="
                             height: 1.5px;
                             background-color: #B0BEC5 !important;
-                            width:90%;">
+                            width:100%;">
                     <% end %>
                 </div>
+                <!-- 分页 -->
                 <div class="space-20">
                     <%= will_paginate @posts , class: " apple_pagination"%>
                 </div>

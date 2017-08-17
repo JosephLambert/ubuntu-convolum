@@ -1,8 +1,11 @@
 <h2 style="text-align:center;" class="space-50"> 视频列表</h2>
+<!-- 新建视频 -->
 <div class="pull-right" style="padding-bottom: 20px;">
     <%= link_to("新建视频", new_admin_video_path, class:"btn btn-primary btn-md ")%>
 </div>
+<!-- 视频列表 -->
 <table class="table commonlink">
+    <!-- 表头 -->
     <thead>
         <tr>
             <th>ID</th>
@@ -10,6 +13,7 @@
             <th>选项</th>
         </tr>
     </thead>
+    <!-- 表身 -->
     <tbody>
         <% @videos.each do |video| %>
             <tr>
