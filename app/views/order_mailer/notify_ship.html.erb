@@ -41,22 +41,31 @@
         </div>
         <hr>
         <h2> 寄送资讯 </h2>
-        <table class="table table-striped table-bordered">
+        <table class='table table-bordered'>
             <tbody>
-                <tr>
-                    <td> 订购人 </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>付款信息</th>
+                    </tr>
+                </thead>
                 <tr>
                     <td>
-                        <%= @order.billing_name %> - <%= @order.billing_phone %>
+                        <strong>付款人-姓名：</strong><%= @order.billing_name%><br/>
+                        <strong> 付款人-电话：</strong><%= @order.billing_phone%><br/>
                     </td>
                 </tr>
-                <tr>
-                    <td> 收件者 </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>
+                            寄送信息
+                        </th>
+                    </tr>
+                </thead>
                 <tr>
                     <td>
-                        <%= @order.shipping_name %> - <%= @order.shipping_address %>
+                        <strong>收件人-姓名：</strong><%= @order.shipping_name%><br/>
+                        <strong>收件人-电话：</strong><%= @order.shipping_address%><br/>
+                        <strong>收件人-地址：</strong><%= @order.shipping_address%>
                     </td>
                 </tr>
             </tbody>
