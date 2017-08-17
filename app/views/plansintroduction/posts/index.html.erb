@@ -10,14 +10,14 @@
                 <div class="row space-50 bg-white " style="margin-left:15px;margin-right:0px;">
                     <% @posts.each do |post| %>
                         <!-- 循环 文章 item -->
-                        <div class="row " style="margin: 35px 0px 40px 22px;">
+                        <div class="row " style="margin: 25px 0px 25px 22px;">
                             <!-- 日期 -->
                             <div class="col-sm-3">
-                                <h3> <%= post.created_at.strftime("%Y/%m/%d") %></h3>
+                                <h3 style="font-size:21px;"> <%= post.created_at.strftime("%Y/%m/%d") %></h3>
                             </div>
                             <!-- 题目 -->
                             <div class="col-sm-7 commonlink">
-                                <h3 class="post-title"><%= link_to(post.title, post_path(post)) %></h3>
+                                <h3 class="post-title" style="font-size:21px;"><%= link_to(post.title, post_path(post)) %></h3>
                             </div>
                             <!-- 访问人数 -->
                             <div class="col-sm-1" >
@@ -44,7 +44,8 @@
                         <hr style="
                             height: 1.5px;
                             background-color: #B0BEC5 !important;
-                            width:100%;">
+                            width:100%;
+                            margin:10px 0px;">
                     <% end %>
                 </div>
                 <!-- 分页 -->
