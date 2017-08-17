@@ -19,27 +19,25 @@
 
 .post-title {
   color: #666666;
-  font-size: 20px;
-  padding-top: 18.5px;
-  padding-bottom: 18px;
-  margin-left: 12px;
-  margin-bottom: 0px;
-  width: 100%;
+
 }
 
-.post-slogan {
-  color: #999999;
-  font-size: 13px;
-  margin-left: 12px;
-  margin-bottom: 0px;
-  padding-bottom: 28px;
-  width: 100%;
-}
+
 
 .upvote  {
   color:#878787;
-  background-color: #fff;
-  padding: 0px ;
+  margin: 26px 0px 10.5px 0px;
+  i {
+    text-decoration:none;
+    color: #878787;
+  }
+  i:hover,
+  i:active,
+  i:focus {
+    text-decoration:none;
+    color: #2196F3;
+    // #2196F3
+  }
   a {
     text-decoration:none;
     color: #878787;
@@ -49,12 +47,13 @@
   a:focus {
     text-decoration:none;
     color: #878787;
+    // #2196F3
   }
 }
 
 .visit {
   color:#878787;
-  background-color: #fff;
+ margin: 26px 0px 10.5px 0px;
   a {
     text-decoration:none;
     color: #878787;

@@ -1,45 +1,51 @@
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 ">
         <div class="container-fluid">
             <div class="row">
                 <div class="pwd space-30">
                     <p class="left-15" style="margin-bottom:-9px;">首页／方案</p>
                 </div>
-                <div class="row">
+                <div class="row space-50 bg-white " style="margin-left:15px;margin-right:0px;">
                     <% @posts.each do |post| %>
-                        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-6 col-md-offset-0 text-center" >
-                            <div style="max-width:430px;">
-                                <div style="margin-top:35px;">
-                                </div>
-                                <!-- 文章标题  宣传语-->
-                                <p class="bg-white post-title"> <%= post.title %> </p>
-                                <div class="container-fluid" style="width:100%;margin-left:12px;">
-                                    <div class="row" style="background-color:#fff;">
-                                        <!-- 浏览量 -->
-                                        <div class="col-md-3 col-md-offset-3 visit">
-                                            <div class="pi-thumbs-up">
-                                                <i class="fa fa-eye" , style="color:#878787;"></i>
-                                                <span> <%=  post.impressionist_count(:filter=>:session_hash) %></span>
-                                            </div>
-                                        </div>
-                                        <!-- 点赞 -->
-                                        <div class="col-md-3 upvote" style="padding-left:17px;">
-                                            <%= link_to like_plansintroduction_post_path(post), method: :put do %>
-                                                <div class="pi-thumbs-up">
-                                                    <i class="fa fa-thumbs-up" , style="color:#878787;"></i>
-                                                    <span> <%= post.get_upvotes.size %></span>
-                                                </div>
-                                            <% end %>
-                                        </div>
+                        <div class="row " style="margin: 35px 15px 40px 15px;">
+                            <div class="col-sm-3">
+                                <h3> <%= post.created_at.strftime("%Y/%m/%d") %></h3>
+                            </div>
+                            <div class="col-sm-7 commonlink">
+                                <h3 class="post-title"><%= link_to(post.title, post_path(post)) %></h3>
+                            </div>
+                            <div class="col-sm-1" >
+                                <div class="visit">
+                                    <div class="pi-thumbs-up">
+                                        <i class="fa fa-eye" , style="color:#878787;"> </i>
+                                        <span> <%=  post.impressionist_count(:filter=>:session_hash) %></span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-1">
+                                <!-- 点赞 -->
+                                <div class="upvote">
+                                    <%= link_to like_plansintroduction_post_path(post), method: :put do %>
+                                        <div class="pi-thumbs-up ">
+                                            <i class="fa fa-thumbs-up " ></i>
+                                            <span> <%= post.get_upvotes.size %></span>
+                                        </div>
+                                    <% end %>
+                                </div>
+                            </div>
                         </div>
+                        <hr style="
+                            height: 1.5px;
+                            background-color: #B0BEC5 !important;
+                            width:90%;">
                     <% end %>
+                </div>
+                <div class="space-20">
+                    <%= will_paginate @posts , class: " apple_pagination"%>
                 </div>
             </div>
         </div>
-        <div class="space-50">
+        <div class="space-20">
             <hr style="border-top: 1px solid #e6e6e6;">
         </div>
     </div>

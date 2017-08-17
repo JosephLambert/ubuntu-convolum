@@ -1,6 +1,6 @@
 class Plansintroduction::PostsController < ApplicationController
     def index
-        @posts = Post.where(category: '方案').order('position ASC').published
+        @posts = Post.where(category: '方案').order('position ASC').published.paginate(page: params[:page], per_page: 3)
     end
 
     def show

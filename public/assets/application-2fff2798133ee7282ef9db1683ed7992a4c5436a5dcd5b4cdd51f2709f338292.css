@@ -38,8 +38,8 @@
 /* line 39, /Users/yanlei/jdstore/app/assets/stylesheets/plansintroduction/posts.scss */
 .upvote {
   color: #878787;
-  background-color: #fff;
-  padding: 0px;
+
+  
 }
 /* line 43, /Users/yanlei/jdstore/app/assets/stylesheets/plansintroduction/posts.scss */
 .upvote a {
@@ -57,7 +57,7 @@
 /* line 55, /Users/yanlei/jdstore/app/assets/stylesheets/plansintroduction/posts.scss */
 .visit {
   color: #878787;
-  background-color: #fff;
+
 }
 /* line 58, /Users/yanlei/jdstore/app/assets/stylesheets/plansintroduction/posts.scss */
 .visit a {
