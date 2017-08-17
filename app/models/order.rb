@@ -28,6 +28,7 @@ class Order < ApplicationRecord
     validates :billing_phone, presence: true
     validates :shipping_name, presence: true
     validates :shipping_address, presence: true
+    validates :shipping_phone, presence: true
 
     acts_as_list
 

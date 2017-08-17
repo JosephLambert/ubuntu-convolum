@@ -25,7 +25,9 @@ class Product < ApplicationRecord
 
     validates :title, presence: { message: '请填写产品名称' }
     validates :description, presence: { message: '请填写产品描述' }
-    validates :quantity, presence: { message: '请填写数量' }
+    validates :slogan, presence: { message: '请填写产品宣传语' }
+    validates :feature, presence: { message: '请填写产品特点' }
+
     validates :price, presence: { message: '请填写价格' }
     validates :category, presence: { message: '请填写种类' }
 

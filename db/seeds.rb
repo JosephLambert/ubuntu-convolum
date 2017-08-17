@@ -5,7 +5,7 @@ u.password_confirmation = '123456'
 u.is_admin = true
 u.save
 
-# intro1-16
+# Intro1-15
 
 create_intro = for i in 1..15 do
                    Intro.create!([
@@ -23,9 +23,30 @@ Video.create!(
 )
 
 # footer 文章
-create_footer_post = for i in 1..7 do
+create_footer_post = for i in 1..3 do
                          Post.create!([
+                                          title: '服务',
+                                          description: "这是用seeds文件建立的第 #{i} 个公开的文章",
+                                          is_hidden: false,
+                                          category: '服务'
+                                      ])
+end
 
+create_footer_post = for i in 4..5 do
+                         Post.create!([
+                                          title: '关于我们',
+                                          description: "这是用seeds文件建立的第 #{i} 个公开的文章",
+                                          is_hidden: false,
+                                          category: '关于我们'
+                                      ])
+end
+
+create_footer_post = for i in 6..7 do
+                         Post.create!([
+                                          title: '招商合作',
+                                          description: "这是用seeds文件建立的第 #{i} 个公开的文章",
+                                          is_hidden: false,
+                                          category: '招商合作'
                                       ])
 end
 # 方案
@@ -93,32 +114,35 @@ end
 create_productaw = for i in 1..3 do
                        Product.create!([title: "Product AW no.#{i}",
                                         description: "这是用seeds文件建立的第 #{i} 个公开的AW产品",
-                                        quantity: rand(6..10),
+                                        quantity: 999,
                                         price: rand(6..10) * 100,
-                                        category: 'aw',
+                                        category: 'AW网桥',
                                         is_hidden: false,
-                                        slogan: "标语 #{i} "])
+                                        slogan: "标语 #{i} ",
+                                        feature: "特点#{i}"])
 
 end
 
 create_productaw = for i in 1..3 do
                        Product.create!([title: "Product CW no.#{i}",
                                         description: "这是用seeds文件建立的第 #{i} 个公开的CW产品",
-                                        quantity: rand(6..10),
+                                        quantity: 999,
                                         price: rand(6..10) * 100,
-                                        category: 'cw',
+                                        category: 'CW无线路由器',
                                         is_hidden: false,
-                                        slogan: "标语 #{i} "])
+                                        slogan: "标语 #{i} ",
+                                        feature: "特点#{i}"])
 
 end
 
 create_productsw = for i in 1..3 do
                        Product.create!([title: "Product SW no.#{i}",
                                         description: "这是用seeds文件建立的第 #{i} 个公开的SW产品",
-                                        quantity: rand(6..10),
+                                        quantity: 999,
                                         price: rand(6..10) * 100,
-                                        category: 'sw',
+                                        category: 'SW交换机',
                                         is_hidden: false,
-                                        slogan: "标语 #{i} "])
+                                        slogan: "标语 #{i} ",
+                                        feature: "特点#{i}"])
 
 end

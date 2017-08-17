@@ -14,17 +14,17 @@
 
 class Post < ApplicationRecord
     CATEGORY = %w(方案 无线知识 网络知识 服务 关于我们 招商合作).freeze
-    # validates_inclusion_of :category, in: CATEGORY
+    validates_inclusion_of :category, in: CATEGORY
 
     SUBCATE = %w(无线1 无线2 无线3 无线4 无线5 网络1 网络2 网络3 网络4 网络5).freeze
 
     acts_as_votable
     is_impressionable
 
-    # validates :title, presence: { message: '请填写文章标题' }
+    validates :title, presence: { message: '请填写文章标题' }
     #
-    # validates :description, presence: { message: '请填写正文' }
-    # validates :category, presence: { message: '请填写文章分类' }
+    validates :description, presence: { message: '请填写正文' }
+    validates :category, presence: { message: '请填写文章分类' }
     acts_as_list
     def publish!
         self.is_hidden = false
