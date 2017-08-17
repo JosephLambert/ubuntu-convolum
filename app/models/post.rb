@@ -18,7 +18,6 @@ class Post < ApplicationRecord
 
     SUBCATE = %w(无线1 无线2 无线3 无线4 无线5 网络1 网络2 网络3 网络4 网络5).freeze
 
-    mount_uploader :postpic, PostpicUploader
     acts_as_votable
     is_impressionable
 

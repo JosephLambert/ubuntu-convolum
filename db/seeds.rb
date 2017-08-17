@@ -34,26 +34,22 @@ Post.create!(
     description: '111',
     category: '方案',
     subcate: '无线1',
-    is_hidden: false,
-    slogan: '汇聚专业知识，快速帮你找到解决方案'
+    is_hidden: false
+
 )
 
 Post.create!(
     title: '酒店网络解决方案',
     description: '111',
     category: '方案',
-
-    is_hidden: false,
-    slogan: '汇聚专业知识，快速帮你找到解决方案'
+    is_hidden: false
 )
 
 Post.create!(
     title: '学校解决方案',
     description: '111',
     category: '方案',
-
-    is_hidden: false,
-    slogan: '汇聚专业知识，快速帮你找到解决方案'
+    is_hidden: false
 )
 
 # 无线知识跟网络知识

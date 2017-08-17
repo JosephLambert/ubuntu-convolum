@@ -13,7 +13,6 @@
                                 </div>
                                 <!-- 文章标题  宣传语-->
                                 <p class="bg-white post-title"> <%= post.title %> </p>
-                                <p class="bg-white post-slogan"> <%= post.slogan %> </p>
                                 <div class="container-fluid" style="width:100%;margin-left:12px;">
                                     <div class="row" style="background-color:#fff;">
                                         <!-- 浏览量 -->
@@ -34,14 +33,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 文章封面 -->
-                                <%= link_to plansintroduction_post_path(post) do  %>
-                                    <% if post.postpic.present? %>
-                                        <%= image_tag(post.postpic.url , class: "post-pic  img-responsive") %>
-                                    <% else %>
-                                        <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79ly1fha95j607vj30by04qq32.jpg", class: "post-pic img-responsive") %>
-                                    <% end %>
-                                <% end %>
                             </div>
                         </div>
                     <% end %>

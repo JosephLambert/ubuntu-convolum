@@ -5,9 +5,6 @@
             <%= f.input :title ,:label => "文章标题"%><br>
         </div>
         <div class="group">
-            <%= f.input :slogan ,:label => "宣传语"%><br>
-        </div>
-        <div class="group">
             <% Post::CATEGORY.each do |c| %>
                 <label>
                     <%= f.radio_button :category, c %>
@@ -25,17 +22,6 @@
             <% end %>
         </div>
         <br>
-        <div class="group">
-            <% if @post.new_record? %>
-            <% else %>
-                <% if @post.postpic.present? %>
-                    <span>目前文章封面图</span><br>
-                    <%= image_tag @post.postpic.url %><br/>
-                <% end %>
-            <% end %>
-            <br>
-            <%= f.input :postpic,as: :file, :label => "上传文章封面图"%>
-        </div>
         <br>
         <div class="group">
             <%= f.cktext_area :description, ckeditor: { toolbar: 'mini', language: 'zh-CN'} %>
