@@ -95,4 +95,6 @@ Rails.application.routes.draw do
     end
 
     resources :messages
+
+    get 'yunguanli', to: 'yunguanli#index'
 end
