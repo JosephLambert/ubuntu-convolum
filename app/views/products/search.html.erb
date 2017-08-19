@@ -1,43 +1,57 @@
-<div>
-    <br>
-    <% if @query_string.blank? %>
-        <div class="search-info-title">
-            Sorry, The search content cannot be blank, please type some product into to search.
+<div class="container-fluid">
+    <div class="row">
+        <div class="space-50 bg-white col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+            <!-- 输入为空 -->
+            <% if @query_string.blank? %>
+                <div class="search-info-title">
+                    <h2 class="center">
+                        对不起，搜索内容不能为空，请输入您想查询的信息。
+                    </h2>
+                </div>
+                <!-- 找不到结果 -->
+            <% elsif @products.blank? && @posts.blank?%>
+                <div class="search-info-title">
+                    <h2 class="center "><span class="fa fa-search"></span> 对不起，没有找到相关信息</h2>
+                </div>
+            <% else %>
+                <!-- 找到结果 -->
+                <div class="search-info-title-2">
+                    <h2 class="center "><span class="fa fa-search"></span> 有关"<%= @query_string %>"的信息</h2>
+                </div>
+                <!-- 文章结果 -->
+                <div class="search-result">
+                    <div class="product-table">
+                        <% @posts.each do |post| %>
+                            <div class="row products-show">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="pull-right">
+                                        发布时间：<%= post.created_at.to_date %>
+                                    </div>
+                                    <p><%= link_to(render_highlight_content_post(post,@query_string),post_path(post)) %></p>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+                <br>
+                <!-- 产品结果 -->
+                <div class="search-result">
+                    <div class="product-table">
+                        <% @products.each do |product| %>
+                            <div class="row products-show">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="pull-right">
+                                        发布时间：<%= product.created_at.to_date %>
+                                    </div>
+                                    <p><%= link_to(render_highlight_content(product,@query_string),product_path(product)) %></p>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="space-50">
+                </div>
+            <% end %>
+        </div>
     </div>
-    <% elsif @products.blank? && @posts.blank?%>
-        <br>
-        <h2 class="search-info-title">对不起，没有找到相关信息</h2>
-    <% else %>
-        <h2 class="search-info-title"> 有关"<%= @query_string %>"的信息 </h2>
-        <div class="search-result">
-            <div class="row products-show0"></div>
-            <div class="product-table">
-                <% @products.each do |product| %>
-                    <div class="row products-show">
-                        <div class="col-md-12 col-lg-9 col-lg-offset-1">
-                            <div class="pull-right">
-                                发布时间：<%= product.created_at.to_date %>
-                            </div>
-                            <p ><%= link_to(render_highlight_content(product,@query_string),product_path(product)) %></p>
-                        </div>
-                    </div>
-                <% end %>
-            </div>
-        </div>
-        <div class="search-result">
-            <div class="row products-show0"></div>
-            <div class="product-table">
-                <% @posts.each do |post| %>
-                    <div class="row products-show">
-                        <div class="col-md-12 col-lg-9 col-lg-offset-1">
-                            <div class="pull-right">
-                                发布时间：<%= post.created_at.to_date %>
-                            </div>
-                            <p ><%= link_to(render_highlight_content_post(post,@query_string),post_path(post)) %></p>
-                        </div>
-                    </div>
-                <% end %>
-            </div>
-        </div>
-    <% end %>
 </div>

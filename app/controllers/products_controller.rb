@@ -52,9 +52,9 @@ class ProductsController < ApplicationController
     def search
         if @query_string.present?
             search_result = Product.ransack(@search_criteria).result(distinct: true)
-            @products = search_result.paginate(page: params[:page], per_page: 5)
+            @products = search_result
             srp = Post.ransack(@search_criteria_post).result(distinct: true)
-            @posts = srp.paginate(page: params[:page], per_page: 5)
+            @posts = srp
         end
   end
 
