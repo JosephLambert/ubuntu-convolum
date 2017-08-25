@@ -26,7 +26,3 @@ public/uploads
 
 # Ignore application configuration
 /config/application.yml
-
-/config/database.yml
-/config/puma.rb
-/config/secrets.yml
