@@ -3,7 +3,7 @@ sh 'ssh-add'
 lock '3.9.0'
 
 set :application, 'convolum'
-set :repo_url, 'git@github.com:JosephLambert/jdstore-mogai.git'
+set :repo_url, 'git@github.com:JosephLambert/ubuntu-convolum.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
