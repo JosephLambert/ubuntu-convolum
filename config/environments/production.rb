@@ -86,6 +86,7 @@ Rails.application.configure do
 
     config.action_mailer.default_url_options = { host: '39.108.4.254' }
     config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = config_for(:email).symbolize_keys
 
     ActionMailer::Base.smtp_settings = {
         address: 'smtpcloud.sohu.com',
