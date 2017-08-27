@@ -6,7 +6,7 @@ class AttachmentUploader < CarrierWave::Uploader::Base
     # Choose what kind of storage to use for this uploader:
 
     if Rails.env.production?
-        storage :aliyun # 正式端
+        storage :qiniu # 正式端
     else
         storage :file # 本地端
     end
