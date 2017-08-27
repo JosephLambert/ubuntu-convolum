@@ -10,7 +10,7 @@ class VideoUploader < CarrierWave::Uploader::Base
     #     storage :file # 本地端
     # end
 
-    storage :file # 本地端
+    # storage :file # 本地端
     # storage :file
     # storage :fog
 

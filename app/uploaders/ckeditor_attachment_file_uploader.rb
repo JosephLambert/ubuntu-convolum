@@ -16,7 +16,7 @@ class CkeditorAttachmentFileUploader < CarrierWave::Uploader::Base
     #     storage :file # 本地端
     # end
 
-    storage :file # 本地端
+    # storage :file # 本地端
 
     # Override the directory where uploaded files will be stored.
     # This is a sensible default for uploaders that are meant to be mounted:

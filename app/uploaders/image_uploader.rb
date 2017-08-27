@@ -11,7 +11,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     #     storage :file # 本地端
     # end
 
-    storage :file # 本地端
+    # storage :file # 本地端
     # storage :fog
     # storage :qiniu
     # Override the directory where uploaded files will be stored.

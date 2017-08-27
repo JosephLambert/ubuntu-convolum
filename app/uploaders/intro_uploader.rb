@@ -10,7 +10,7 @@ class IntroUploader < CarrierWave::Uploader::Base
     #     storage :file # 本地端
     # end
 
-    storage :file # 本地端
+    # storage :file # 本地端
     # storage :fog
 
     # Override the directory where uploaded files will be stored.
