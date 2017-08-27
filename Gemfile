@@ -41,6 +41,7 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'carrierwave-aliyun'
 gem 'mini_magick'
+gem 'rest-client'
 gem 'letter_opener', group: :development
 gem 'aasm'
 gem 'carrierwave-qiniu'

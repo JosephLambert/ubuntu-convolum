@@ -329,6 +329,7 @@ DEPENDENCIES
   rails (~> 5.0.2)
   rails-i18n
   ransack
+  rest-client
   sass-rails (~> 5.0)
   seo_helper
   simple_form
