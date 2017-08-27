@@ -26,5 +26,3 @@ public/uploads
 
 # Ignore application configuration
 /config/application.yml
-
-/config/initializers/carrierwave.rb
