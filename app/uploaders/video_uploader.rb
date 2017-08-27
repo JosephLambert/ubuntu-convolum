@@ -4,13 +4,13 @@ class VideoUploader < CarrierWave::Uploader::Base
     # include CarrierWave::MiniMagick
 
     # Choose what kind of storage to use for this uploader:
-    if Rails.env.production?
-        storage :qiniu # 正式端
-    else
-        storage :file # 本地端
-    end
+    # if Rails.env.production?
+    #     storage :qiniu # 正式端
+    # else
+    #     storage :file # 本地端
+    # end
 
-    # storage :file # 本地端
+    storage :file # 本地端
     # storage :file
     # storage :fog
 
