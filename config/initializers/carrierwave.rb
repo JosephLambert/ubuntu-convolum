@@ -1,7 +1,7 @@
 CarrierWave.configure do |config|
     config.storage = :aliyun
-    config.aliyun_access_id  = 'LTAIOk90tmyBFj9a'
-    config.aliyun_access_key = 'mC3LSXBkqsLpmzB5VINlkqY4I7zH4b'
+    config.aliyun_access_id  = 'LTAI02AihiSUJGri'
+    config.aliyun_access_key = 'SSXGKcSAWCMDxSuUkngslTDMadP1k7'
     # 你需要在 Aliyum OSS 上面提前创建一个 Bucket
     config.aliyun_bucket     = 'convolum'
     # 是否使用内部连接，true - 使用 Aliyun 主机内部局域网的方式访问  false - 外部网络访问
